@@ -3,37 +3,25 @@
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
   import { writable } from "svelte/store";
+  import { darkMode } from '../stores/theme.js';
 
-  import { darkMode } from '$lib/stores/theme.js';
-
-function toggleDarkMode() {
-  darkMode.update(mode => !mode);
-}
-
-  let isDark = false;
   let isMenuOpen = writable(false);
+  let isDark = false;
 
-onMount(() => {
-    isDark = localStorage.getItem('theme') === 'dark';
-    updateTheme();
-  });
-
-  function updateTheme() {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }
-
+  $: isDark = $darkMode === 'dark';
 
   const toggleMenu = () => {
     isMenuOpen.update(value => !value);
   };
+
+function toggleDarkMode() {
+  darkMode.update((mode) => (mode === 'dark' ? 'light' : 'dark'));
+}
+
 </script>
 
-<header class="flex justify-between items-center sticky top-0 w-full bg-white/50 backdrop-blur-md shadow-md p-2 z-10 transition-colors duration-300 dark:bg-gray-900/50 dark:text-white">
-  <div class="text-xl font-bold">JxS</div>
+<header class="flex justify-between items-center sticky top-0 w-full backdrop-blur-md shadow-md p-2 z-10 transition-colors duration-300 dark:text-white">
+  <div class="text-xl font-bold pl-3">JxS</div>
 
   <nav class="relative flex items-center space-x-4">
     <!-- Dark mode toggle -->

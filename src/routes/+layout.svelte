@@ -5,12 +5,20 @@
   import Footer from "$lib/components/Footer.svelte";
 </script>
 
+<div class="bg-gradient-to-br from-pink-100 to-cyan-100 text-gray-800 dark:bg-gradient-to-br dark:from-black dark:to-black">
 <Navbar />
 
-<main class="min-h-screen flex flex-col">
+ <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll position-relative'>
   <slot />
-</main>
+ </div>
+</div>
 
 <Playlist />
 
 <Footer />
+
+<style>
+  .h-full {
+    min-height: 100vh;
+  }
+</style>

@@ -3,7 +3,7 @@
   </script>
   
   <div class="overflow-hidden">
-	<div class="flex flex-grow flex-col items-center md:gap-[16rem]">
+	<div class="flex flex-grow flex-col">
 	  <Hero />
 	</div>
   </div>

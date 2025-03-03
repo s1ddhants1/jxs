@@ -1,8 +1,8 @@
 <script>
-  import { darkMode } from '$lib/stores/theme.js';
+   //import { darkMode } from '$lib/stores/theme.js';
 </script>
 
-<div class="w-full px-4 bg-gradient-to-br from-pink-100 to-cyan-100 text-gray-800 dark:bg-gradient-to-br dark:from-black dark:to-black dark:text-gray"> 
+<div class="w-full  dark:text-gray"> 
   
   <div class="intro mt-50 text-center">
     <h2 class="text-4xl text-gray-800 dark:text-gray-300 font-bold">

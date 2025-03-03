@@ -1,13 +1,22 @@
 import { writable } from 'svelte/store';
+import { browser } from '$app/environment'; // SvelteKit check for browser
 
-export const darkMode = writable(false);
+const defaultTheme = 'light';
 
-if (typeof localStorage !== 'undefined') {
-  darkMode.set(localStorage.getItem('theme') === 'dark');
+// Initialize theme only on the client
+let initialTheme = defaultTheme;
+if (browser) {
+  const storedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
 }
 
-darkMode.subscribe(value => {
-  if (typeof localStorage !== 'undefined') {
-    localStorage.setItem('theme', value ? 'dark' : 'light');
-  }
-});
+export const darkMode = writable(initialTheme);
+
+// Ensure changes apply only in the browser
+if (browser) {
+  darkMode.subscribe((value) => {
+    localStorage.setItem('theme', value);
+    document.documentElement.classList.toggle('dark', value === 'dark');
+  });
+}
