@@ -1,36 +1,59 @@
 <script>
-   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
-   import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
+  import { onMount } from "svelte";
+  import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
+  import { faPlay, faPause} from "@fortawesome/free-solid-svg-icons";
 
-  import { onMount } from 'svelte';
-  let video;
-  let audio = document.getElementById("background-music");
   let isPlaying = false;
+  let lines = [];
+  let delay = 0;
 
   onMount(() => {
-    audio = document.getElementById('background-music');
-  });
+    lines.forEach((line, index) => {
+      setTimeout(() => {
+        line.style.opacity = "1";
+        line.style.width = line.scrollWidth + "px";
 
-  function toggleAudio() {
-    if (audio.paused) {
-      audio.play();
-      isPlaying = true;
-    } else {
-      audio.pause();
-      isPlaying = false;
-    }
-  }
+        setTimeout(() => {
+          line.style.borderRight = "none"; // Remove cursor effect after typing
+        }, 2000);
+      }, delay);
+
+      delay += 2500;
+    });
+  });
 </script>
 
-<video bind:this={video} autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-  <source src="../assets/bg.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
+<!-- Background Video -->
+<video id="background-video" autoplay loop muted class="fixed top-0 left-0 min-w-full min-h-full object-cover z-[-1]">
+  <source src="/bg.mp4" type="video/mp4" />
 </video>
 
-<audio bind:this={audio} loop class="hidden">
-  <source src="../assets/music.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-</audio>
+<!-- Main Container -->
+<div class="container flex flex-col justify-center items-center h-screen text-center text-white font-[LondonBetween]">
+  
+  <div class="typing-animation flex flex-col space-y-2">
+    {#each ["Hello, world!", "Welcome to Svelte.", "Enjoy coding!"] as text, i}
+      <p
+        bind:this={lines[i]}
+        class="opacity-0 overflow-hidden whitespace-nowrap border-r-2 border-white w-0 
+               transition-all duration-2000 ease-in-out text-[clamp(1.2rem,1.5vw,2rem)] my-2"
+      >
+        {text}
+      </p>
+    {/each}
+
+    <!-- Special Line with Gradient -->
+    <p
+      id="line3"
+      bind:this={lines[3]}
+      class="opacity-0 overflow-hidden whitespace-nowrap w-0 font-bold
+             bg-gradient-to-r from-[#B2005A] via-[#D80073] to-[#FF66A3]
+             bg-clip-text text-transparent text-[clamp(2.5rem,3.5vw,4rem)]"
+    >
+      Dynamic Gradient Text
+    </p>
+  </div>
+</div>
 
 
   <button on:click={toggleAudio} class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">

@@ -1,11 +1,9 @@
 <script>
-	import Typing from "$lib/components/Typing.svelte";
     import Valentine from "$lib/components/Valentine.svelte";
   </script>
   
   <div class="overflow-hidden">
 	<div class="flex flex-grow flex-col">
-	  <Typing />
       <Valentine />
 	</div>
   </div>
