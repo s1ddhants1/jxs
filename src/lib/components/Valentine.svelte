@@ -1,0 +1,26 @@
+<script>
+</script>
+
+<video autoplay muted loop id="background-video" playsinline>
+    <source src="../assets/bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <audio id="background-music" loop>
+    <source src="../assets/music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="play-music" title="Play Music">
+    <i class="fas fa-play"></i>
+  </button>
+
+  <div class="container">
+    <div class="typing-animation">
+      <p id="line1">&nbsp;heyy nini!!</p>
+      <p id="line2">&nbsp;Would you like to...</p>
+      <p id="line3">Be My Valentine?</p>
+      <p id="line4">&nbsp;...please?</p>
+      <p id="line5">&nbsp;I love you <3</p>
+    </div>
+  </div>
