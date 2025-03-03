@@ -25,20 +25,20 @@ function toggleDarkMode() {
 
   <nav class="relative flex items-center space-x-4">
     <!-- Dark mode toggle -->
-    <button on:click={toggleDarkMode} class="p-2 rounded-md transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
-      <FontAwesomeIcon icon={isDark ? faSun : faMoon} class="text-gray-900 dark:text-gray-100 text-xl" />
+    <button on:click={toggleDarkMode} class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
+      <FontAwesomeIcon icon={isDark ? faSun : faMoon} class="text-neutral-900 dark:text-neutral-100 text-xl" />
     </button>
 
     <!-- Menu container -->
     <div class="relative">
-      <button on:click={toggleMenu} class="p-2 rounded-md transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
-        <FontAwesomeIcon icon={faBars} class="text-gray-900 dark:text-gray-100 text-2xl" />
+      <button on:click={toggleMenu} class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
+        <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl" />
       </button>
 
       {#if $isMenuOpen}
-        <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
-          <a href="https://jxs.pages.dev" class="hover:text-gray-600 dark:hover:text-gray-300">Home</a>
-          <a href="valentine/+page.svelte" class="hover:text-gray-600 dark:hover:text-gray-300">Valentine</a>
+        <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
+          <a href="https://jxs.pages.dev" class="hover:text-neutral-600 dark:hover:text-neutral-300">Home</a>
+          <a href="valentine/+page.svelte" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
         </div>
       {/if}
     </div>
