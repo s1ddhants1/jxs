@@ -2,7 +2,7 @@
    //import { darkMode } from '$lib/stores/theme.js';
 </script>
 
-<div class="w-full  dark:text-gray"> 
+<div class="w-full min-h-screen dark:text-gray"> 
   
   <div class="intro mt-50 text-center">
     <h2 class="text-5xl text-gray-800 dark:text-gray-300 font-bold">
