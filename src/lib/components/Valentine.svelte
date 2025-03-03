@@ -21,6 +21,6 @@
       <p id="line2">&nbsp;Would you like to...</p>
       <p id="line3">Be My Valentine?</p>
       <p id="line4">&nbsp;...please?</p>
-      <p id="line5">&nbsp;I love you <3</p>
+      <p id="line5">&nbsp;I love you </p>
     </div>
   </div>
