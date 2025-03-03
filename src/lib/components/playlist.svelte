@@ -14,7 +14,7 @@
       title="Spotify Playlist" 
       style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/5y3UShsEvgcXVlHyfcVfSe?utm_source=generator&theme=0" 
-      class="relative w-full h-full border-0" 
+      class="relative w-full h-full border-0 opacity-90" 
       allowfullscreen 
       allow="autoplay clipboard-write encrypted-media fullscreen picture-in-picture"
       loading="lazy">
