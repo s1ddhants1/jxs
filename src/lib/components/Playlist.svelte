@@ -2,10 +2,10 @@
 </script>
 
 <div class="flex flex-col items-center justify-center relative text-nowrap bg-gradient-to-br from-pink-100 to-cyan-100 ">
-    <p class="text-[250px] font-bold absolute top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent z-0">
+    <p class="text-[70px] mt-20 font-bold bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent z-0">
         SONGS
     </p>
-    <p class="text-5xl left-0 bg-gradient-to-r from-pink-500 to-pink bg-clip-text text-transparent mt-20 ml-10">
+    <p class="text-5xl absolute mr-220 mb-20 bg-gradient-to-r from-pink-500 to-pink bg-clip-text text-transparent">
          that make me...
     </p>
 
@@ -20,7 +20,7 @@
       loading="lazy">
      </iframe>
         </div>
-    <p class="text-5xl bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+    <p class="text-5xl absolute ml-220 mt-90 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
      ..think of Nini! 
     </p>
 </div>

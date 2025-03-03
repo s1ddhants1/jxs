@@ -4,7 +4,7 @@
 
   import { onMount } from 'svelte';
   let video;
-  let audio;
+  let audio = document.getElementById("background-music");
   let isPlaying = false;
 
   onMount(() => {
@@ -37,11 +37,11 @@
     <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
   </button>
 
-  <div class="container">
+  <div class="w-full dark:text-gray"> 
     <div class="typing-animation">
-      <p id="line1">&nbsp;heyy nini!!</p>
+      <p id="line1" class="text-base mt-2 text-gray-800 dark:text-gray-300">&nbsp;heyy nini!!</p>
       <p id="line2">&nbsp;Would you like to...</p>
-      <p id="line3">Be My Valentine?</p>
+      <p id="line3" class="text-6xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">Be My Valentine?</p>
       <p id="line4">&nbsp;...please?</p>
       <p id="line5">&nbsp;I love you </p>
     </div>
