@@ -1,10 +1,12 @@
 <script>
 	import Hero from "$lib/components/Hero.svelte";
+	import Playlist from "$lib/components/playlist.svelte";
   </script>
   
   <div class="overflow-hidden">
 	<div class="flex flex-grow flex-col">
 	  <Hero />
+	  <Playlist />
 	</div>
   </div>
   
