@@ -23,5 +23,4 @@
     <p class="text-5xl bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
      ..think of Nini! 
     </p>
-
 </div>

@@ -21,7 +21,7 @@ function toggleDarkMode() {
 </script>
 
 <header class="flex justify-between items-center sticky top-0 w-full backdrop-blur-md shadow-md p-2 z-10 transition-colors duration-300 dark:text-white">
-  <div class="text-xl font-bold pl-3">JxS</div>
+  <a href="/" class="text-xl font-bold pl-3">JxS</a>
 
   <nav class="relative flex items-center space-x-4">
     <!-- Dark mode toggle -->
@@ -38,7 +38,7 @@ function toggleDarkMode() {
       {#if $isMenuOpen}
         <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
           <a href="https://jxs.pages.dev" class="hover:text-neutral-600 dark:hover:text-neutral-300">Home</a>
-          <a href="valentine/+page.svelte" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
+          <a href="valentine/+.svelte" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
         </div>
       {/if}
     </div>

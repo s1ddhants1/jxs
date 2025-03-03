@@ -1,6 +1,6 @@
 <script>
 	import Hero from "$lib/components/Hero.svelte";
-	import Playlist from "$lib/components/playlist.svelte";
+	import Playlist from "$lib/components/Playlist.svelte";
   </script>
   
   <div class="overflow-hidden">
