@@ -37,8 +37,8 @@ function toggleDarkMode() {
 
       {#if $isMenuOpen}
         <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
-          <a href="https://jxs.pages.dev" class="hover:text-neutral-600 dark:hover:text-neutral-300">Home</a>
-          <a href="valentine/+.svelte" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
+          <a href="/" class="hover:text-neutral-600 dark:hover:text-neutral-300">Home</a>
+          <a href="/valentine" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
         </div>
       {/if}
     </div>
