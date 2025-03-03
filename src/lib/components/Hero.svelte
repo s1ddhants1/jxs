@@ -5,10 +5,10 @@
 <div class="w-full  dark:text-gray"> 
   
   <div class="intro mt-50 text-center">
-    <h2 class="text-4xl text-gray-800 dark:text-gray-300 font-bold">
+    <h2 class="text-5xl text-gray-800 dark:text-gray-300 font-bold">
       Jenny<br>&<br>Siddhant
     </h2>
-    <h3 class="bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent text-6xl font-bold">
+    <h3 class="text-7xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent font-bold">
       Forever<br>❤️
     </h3>
     <h4 class="text-base mt-2 text-gray-800 dark:text-gray-300">
