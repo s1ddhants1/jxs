@@ -1,0 +1,55 @@
+<script>
+  import { onMount } from "svelte";
+
+  function handleClick(event) {
+    const heart = document.createElement("span");
+    heart.innerHTML = "❤️";
+    heart.style.position = "absolute";
+    heart.style.left = `${event.clientX}px`;
+    heart.style.top = `${event.clientY}px`;
+    heart.style.fontSize = "24px";
+    heart.style.pointerEvents = "none";
+    heart.style.animation = "floatUp 1s ease-out forwards";
+    heart.classList.add("floating-heart");
+    
+    // Apply gradient styling
+    heart.style.backgroundImage = "linear-gradient(to right, #B2005A, #D80073, #FF66A3)";
+    heart.style.webkitBackgroundClip = "text";
+    heart.style.color = "transparent";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 1000);
+  }
+</script>
+
+<style>
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  }
+
+  .floating-heart {
+    animation: floatUp 1s ease-out forwards;
+    font-weight: bold;
+  }
+</style>
+
+<section class="mt-36 flex flex-col text-center">
+  <h2 class="text-3xl text-gray-800 dark:text-gray-200">Jenny<br />&<br />Siddhant</h2>
+  <h3 
+    class="bg-gradient-to-r from-pink-800 via-pink-600 to-pink-400 bg-clip-text text-transparent text-5xl font-bold"
+    on:click={handleClick}
+  >
+    Forever<br />❤️
+  </h3>
+  <h4 class="text-lg text-gray-700 dark:text-gray-300">A little place on the internet to celebrate us!</h4>
+</section>

@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "LondonBetween";
+	src: url("/fonts/LondonBetween.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  body {
+	font-family: "LondonBetween", sans-serif;
+  }
+  
+  @theme {
+	--color-primary-bg-light: #FFDEE9;
+	--color-secondary-bg-light: #B5FFFC;
+	--color-primary-bg-dark: #181818;
+	--color-secondary-bg-dark: #222222;
+	--color-navbar-bg-light: #ffffff;
+	--color-navbar-bg-dark: #1e1e1e;
+	--color-text-light: #333;
+	--color-text-dark: #E0E0E0;
+	--color-accent: #D80073;
+	--color-gradient-text-start: #B2005A;
+	--color-gradient-text-middle: #D80073;
+	--color-gradient-text-end: #FF66A3;
+  }
+  
