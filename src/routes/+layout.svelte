@@ -5,16 +5,12 @@
 </script>
 
 <div class="bg-gradient-to-br from-pink-100 to-cyan-100 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900">
-<Navbar />
-
- <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll position-relative'>
+  <Navbar />
+  <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll position-relative'>
   <slot />
- </div>
+  </div>
 </div>
-
-
-
-<Footer />
+ <Footer />
 
 <style>
   .h-full {
