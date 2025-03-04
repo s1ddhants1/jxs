@@ -18,7 +18,6 @@
   }
 </script>
 
-<!-- Background Video -->
 <div class="fixed inset-0 -z-10 overflow-hidden">
   <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
     <source src="/bg.mp4" type="video/mp4" />
@@ -26,12 +25,10 @@
   </video>
 </div>
 
-<!-- Audio Button -->
 <button on:click={toggleAudio} class="mt-auto p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
   <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
 </button>
 
-<!-- Valentine's Message -->
 <div class="w-full mt-50 dark:text-white text-center"> 
   <div class="typing-animation">
     <p class="text-3xl mt-2 text-white-800 dark:text-white-300">heyy nini!!</p>
