@@ -5,7 +5,7 @@
     <p class="text-[70px] absolute mb-100 font-bold bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent z-0">
         SONGS
     </p>
-    <p class="text-5xl absolute mr-220 mb-20 bg-gradient-to-r from-pink-500 to-pink bg-clip-text text-transparent">
+    <p class="text-5xl absolute mr-220 mb-75 bg-gradient-to-r from-pink-500 to-pink bg-clip-text text-transparent">
          that make me...
     </p>
 
@@ -20,7 +20,7 @@
       loading="lazy">
      </iframe>
         </div>
-    <p class="text-5xl absolute ml-220 mt-90 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+    <p class="text-5xl absolute ml-220 mt-80 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
      ..think of Nini! 
     </p>
 </div>
