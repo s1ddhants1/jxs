@@ -29,11 +29,11 @@
   <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
 </button>
 
-<div class="w-full mt-50 dark:text-white text-center text-nowrap"> 
+<div class="w-full mt-50 dark:text-white text-center"> 
   <div class="typing-animation">
     <p class="text-3xl mt-2 text-white-800 dark:text-white-300">heyy nini!!</p>
     <p class="text-3xl mt-2 text-white-800 dark:text-white-300">Would you like to...</p>
-    <p class="text-6xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
+    <p class="text-6xl leading-20 bg-gradient-to-r from-pink-500 via-pink-700 to-pink bg-clip-text text-transparent font-bold">
       Be My Valentine?
     </p>
     <p class="text-3xl mt-2 text-white-800 dark:text-white-300">...please?</p>
