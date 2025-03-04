@@ -13,6 +13,7 @@
   body {
 	font-family: "LondonBetween", sans-serif;
 	height: 100vh;
+	background-color: #181818;
   }
   
   @theme {

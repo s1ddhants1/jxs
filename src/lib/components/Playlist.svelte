@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<div class="flex flex-col items-center justify-center relative text-nowrap bg-gradient-to-br from-pink-100 to-cyan-100 ">
-    <p class="text-[70px] mt-20 font-bold bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent z-0">
+<div class="w-full min-h-screen flex flex-col items-center justify-center relative text-nowrap bg-gradient-to-br from-pink-100 to-cyan-100 ">
+    <p class="text-[70px] absolute mb-100 font-bold bg-gradient-to-r from-pink-700 via-pink-500 to-pink-300 bg-clip-text text-transparent z-0">
         SONGS
     </p>
     <p class="text-5xl absolute mr-220 mb-20 bg-gradient-to-r from-pink-500 to-pink bg-clip-text text-transparent">
