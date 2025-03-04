@@ -2,6 +2,7 @@
    //import { darkMode } from '$lib/stores/theme.js';
 </script>
 
+<div class="bg-gradient-to-br from-pink-100 to-cyan-100 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900">
 <div class="w-full min-h-screen dark:text-gray"> 
   
   <div class="intro mt-50 text-center">
@@ -15,4 +16,5 @@
       A little place on the internet to celebrate us!
     </h4>
   </div>
+</div>
 </div>

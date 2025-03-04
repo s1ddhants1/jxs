@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
   import { writable } from "svelte/store";
@@ -24,12 +23,10 @@ function toggleDarkMode() {
   <a href="/" class="text-xl font-bold pl-3">JxS</a>
 
   <nav class="relative flex items-center space-x-4">
-    <!-- Dark mode toggle -->
     <button on:click={toggleDarkMode} class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
       <FontAwesomeIcon icon={isDark ? faSun : faMoon} class="text-neutral-900 dark:text-neutral-100 text-xl" />
     </button>
 
-    <!-- Menu container -->
     <div class="relative">
       <button on:click={toggleMenu} class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
         <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl" />

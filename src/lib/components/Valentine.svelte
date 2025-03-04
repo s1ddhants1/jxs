@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,7 +28,7 @@
   <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
 </button>
 
-<div class="w-full mt-50 dark:text-white text-center"> 
+<div class="z-20 w-full mt-50 dark:text-white text-center"> 
   <div class="typing-animation">
     <p class="text-3xl mt-2 text-white-800 dark:text-white-300">heyy nini!!</p>
     <p class="text-3xl mt-2 text-white-800 dark:text-white-300">Would you like to...</p>
