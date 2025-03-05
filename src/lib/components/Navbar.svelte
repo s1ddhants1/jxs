@@ -1,22 +1,21 @@
 <script>
-  import { onMount } from 'svelte';
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
-  import { isDark, toggleDarkMode } from '$lib/stores/theme.js';
   import { writable } from "svelte/store";
-  
-  onMount(() => {
-    $isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
-  });
-
-const storedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  import { darkMode } from '../stores/theme.js';
 
   let isMenuOpen = writable(false);
 
-  const toggleMenu = () => {
+  function toggleMenu() {
     isMenuOpen.update(value => !value);
-  };
+  }
+
+  function toggleDarkMode() {
+    darkMode.update(mode => (mode === 'dark' ? 'light' : 'dark'));
+  }
+
+  // Make sure UI updates properly
+  $: isDark = $darkMode === 'dark';
 </script>
 
 <header class="flex justify-between items-center sticky top-0 w-full backdrop-blur-md shadow-md p-2 z-10 transition-colors duration-300 dark:text-white">
