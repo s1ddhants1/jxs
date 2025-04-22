@@ -13,7 +13,7 @@
     <h3 class="font-[LondonBetween] text-7xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
       Forever<br>❤️
     </h3>
-    <h4 class="text-base mt-2 text-gray-800 dark:text-gray-300">
+    <h4 class="font-[LondonBetween] text-base mt-2 text-gray-800 dark:text-gray-300">
       A little place on the internet to celebrate us!
     </h4>
   </div>
