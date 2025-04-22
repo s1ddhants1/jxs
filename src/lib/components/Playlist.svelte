@@ -24,7 +24,7 @@
         });
       } else {
         await navigator.clipboard.writeText(playlistUrl);
-        shareButtonText = "Copied!";
+        shareButtonText = "Copied to Clipboard!";
         isCopied = true;
         setTimeout(() => {
           shareButtonText = "Share";
@@ -33,7 +33,7 @@
       }
     } catch (err) {
       console.error('Sharing failed:', err);
-      shareButtonText = "Error";
+      shareButtonText = "...";
       setTimeout(() => shareButtonText = "Share", 2000);
     }
   };    
@@ -45,7 +45,7 @@
             PLAYLIST
         </p>
         <p class="text-5l bg-gradient-to-b from-rose-800 via-rose-850 to-rose-950 bg-clip-text text-transparent">
-            Songs that make me think of Nini! 
+            for songs that make me think of Nini! 
         </p>
 
     <div class="mt-10 w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
