@@ -43,7 +43,7 @@
 </script>
 
 <header class="flex justify-between items-center sticky top-0 w-full backdrop-blur-md shadow-md p-2 z-10 transition-colors duration-300 dark:text-white">
-  <a href="/" class="text-xl font-bold pl-3">JxS</a>
+  <a href="/" class="font-[LondonBetween] text-xl font-bold pl-3">JxS</a>
 
   <nav class="relative flex items-center space-x-4">
 

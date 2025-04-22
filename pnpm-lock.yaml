@@ -17,6 +17,9 @@ importers:
       '@fortawesome/svelte-fontawesome':
         specifier: ^0.2.3
         version: 0.2.3(@fortawesome/fontawesome-svg-core@6.7.2)(svelte@5.28.1)
+      postcss:
+        specifier: ^8.5.3
+        version: 8.5.3
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.8
