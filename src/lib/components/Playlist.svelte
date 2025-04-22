@@ -69,7 +69,7 @@
       <button 
       on:click={sharePlaylist}
       class="px-4 py-2 rounded-lg bg-transparent border border-rose-800 hover:bg-rose-900/50 text-rose-100 transition-colors"
-      aria-label="Save playlist to your browser storage">
+      aria-label="Save playlist to Spotify">
       {shareButtonText}
       </button>
     </div>
