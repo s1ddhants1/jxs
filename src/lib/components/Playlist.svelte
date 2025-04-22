@@ -8,7 +8,8 @@
   let isCopied = false;
 
   // Save to localStorage
- 
+  const savePlaylist = null
+  saveButtonText = "Save";
 
   // Share with Web Share API or fallback
   const sharePlaylist = async () => {

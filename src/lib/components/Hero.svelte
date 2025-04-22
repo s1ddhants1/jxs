@@ -31,12 +31,8 @@
 </div>
 
 <style>
-  /* Add subtle heartbeat animation */
   @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
-  }
-  .animate-pulse {
-    animation: pulse 3s ease-in-out infinite;
   }
 </style>
