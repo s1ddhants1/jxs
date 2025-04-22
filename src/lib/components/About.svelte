@@ -51,8 +51,4 @@
  </div>
  
  <style>
-   /* Prevent scrolling when touching characters */
-   .touch-none {
-     touch-action: none;
-   }
  </style>
