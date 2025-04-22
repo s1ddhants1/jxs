@@ -1,6 +1,41 @@
 <script lang="ts">
     let currentPlaylist = "5y3UShsEvgcXVlHyfcVfSe";
     let playlistTheme = "0"; // 0 for dark, 1 for light
+
+    // Button states
+  let saveButtonText = "Save Playlist";
+  let shareButtonText = "Share";
+  let isCopied = false;
+
+  // Save to localStorage
+ 
+
+  // Share with Web Share API or fallback
+  const sharePlaylist = async () => {
+    const playlistUrl = `https://open.spotify.com/playlist/${currentPlaylist}`;
+    
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "Check out this playlist!",
+          text: "Songs that make me think of Nini!",
+          url: playlistUrl
+        });
+      } else {
+        await navigator.clipboard.writeText(playlistUrl);
+        shareButtonText = "Copied!";
+        isCopied = true;
+        setTimeout(() => {
+          shareButtonText = "Share";
+          isCopied = false;
+        }, 2000);
+      }
+    } catch (err) {
+      console.error('Sharing failed:', err);
+      shareButtonText = "Error";
+      setTimeout(() => shareButtonText = "Share", 2000);
+    }
+  };    
   </script>
   
   <div class="w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-900 via-black to-rose-900">
@@ -23,11 +58,18 @@
     </div>
   
     <div class="mt-8 flex gap-4">
-      <button class="px-4 py-2 rounded-lg bg-rose-900 hover:bg-rose-600 text-white transition-colors">
-        Save Playlist
+      <button 
+      on:click={savePlaylist}
+      class="px-4 py-2 rounded-lg bg-rose-900 hover:bg-rose-800 text-white transition-colors"
+       aria-label="Save playlist on Spotify">
+      {saveButtonText}
       </button>
-      <button class="px-4 py-2 rounded-lg bg-transparent border border-rose-800 hover:bg-rose-900/50 text-rose-100 transition-colors">
-        Share
+
+      <button 
+      on:click={sharePlaylist}
+      class="px-4 py-2 rounded-lg bg-transparent border border-rose-800 hover:bg-rose-900/50 text-rose-100 transition-colors"
+      aria-label="Save playlist to your browser storage">
+      {shareButtonText}
       </button>
     </div>
   </div>
