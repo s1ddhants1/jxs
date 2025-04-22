@@ -17,3 +17,9 @@
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
   }
+
+  @layer utilities {
+	.bg-radial-wine {
+	  background: radial-gradient(ellipse at center, #722F37 0%, #E6E6FA 100%);
+	}
+  }

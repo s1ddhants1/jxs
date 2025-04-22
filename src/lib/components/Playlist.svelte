@@ -2,11 +2,11 @@
 </script>
 
 <div class="adaptive">
-<div class="w-full min-h-screen flex flex-col items-center justify-center relative text-nowrap bg-gradient-to-br from-violet-200 via-white to-orange-200 ">
-    <p class="text-[50px] font-bold bg-gradient-to-r from-pink-700 via-pink-500 to-pink-500 bg-clip-text text-transparent z-0">
+<div class="w-full min-h-screen flex flex-col items-center justify-center relative text-nowrap bg-radial-wine ">
+    <p class="text-[50px] font-bold bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-transparent z-0">
         PLAYLIST
     </p>
-    <p class="text-5l bg-gradient-to-r from-pink-800 via-pink-600 to-pink-500 bg-clip-text text-transparent">
+    <p class="text-5l bg-gradient-to-b from-rose-800 via-rose-850 to-rose-950 bg-clip-text text-transparent">
         Songs that make me think of Nini! 
     </p>
 
