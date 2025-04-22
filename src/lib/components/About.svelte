@@ -11,7 +11,7 @@
     </div>
 
     <div class="z-0 h-screen w-full flex items-center justify-center text-white">
-      <p class="text-4xl font-serif backdrop-blur-sm px-6 py-3 rounded-lg">Wine & Lavender </p>
+      <p class="text-4xl font-serif backdrop-blur-sm px-6 py-3 rounded-lg">Fun Times </p>
        </div>
 
     <div class="absolute z-1 right-0 top-1/2 -translate-y-1/2">
