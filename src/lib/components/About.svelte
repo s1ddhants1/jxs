@@ -14,7 +14,7 @@
      on:mouseleave={() => kimPeeking = false}
    >
      <img 
-       src="/kim.png" 
+       src="/kim.webp" 
        alt="Mr. Kim"
        class="h-40 md:h-64 -translate-x-[36%] transition-transform duration-300
               {kimPeeking ? 'translate-x-0' : ''}
@@ -38,7 +38,7 @@
      on:mouseleave={() => olafPeeking = false}
    >
      <img 
-       src="/olaf.png" 
+       src="/olaf.webp" 
        alt="Olaf"
        class="h-40 md:h-64 translate-x-[20%] transition-transform duration-300
               {olafPeeking ? 'translate-x-0' : ''}
