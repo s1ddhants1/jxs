@@ -1,20 +1,6 @@
 <script>
-  import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
-  import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
-
-  let isPlaying = false;
   let lines = [];
   let delay = 0;
-  let audio = new Audio("/music.mp3");
-
-  function toggleAudio() {
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
-    isPlaying = !isPlaying;
-  }
 </script>
 
 <div class="fixed inset-0 -z-10 overflow-hidden">
@@ -23,10 +9,6 @@
     Your browser does not support the video tag.
   </video>
 </div>
-
-<button on:click={toggleAudio} class="mt-auto p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
-  <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
-</button>
 
 <div class="z-20 w-full mt-50 dark:text-white text-center"> 
   <div class="typing-animation">
