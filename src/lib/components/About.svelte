@@ -8,11 +8,13 @@
    <!-- Mr. Kim (left) -->
    <div 
      class="absolute z-10 left-0 top-1/2 -translate-y-1/2"
+     role="img"
      on:touchstart={() => kimPeeking = true}
      on:touchend={() => kimPeeking = false}
      on:mouseenter={() => kimPeeking = true}
      on:mouseleave={() => kimPeeking = false}
-   >
+    >
+
      <img 
        src="/kim.webp" 
        alt="Mr. Kim"
@@ -32,6 +34,7 @@
    <!-- Olaf (right) -->
    <div 
      class="absolute z-10 right-0 top-1/2 -translate-y-1/2"
+     role="img"
      on:touchstart={() => olafPeeking = true}
      on:touchend={() => olafPeeking = false}
      on:mouseenter={() => olafPeeking = true}
@@ -43,7 +46,7 @@
        class="h-40 md:h-64 translate-x-[20%] transition-transform duration-300
               {olafPeeking ? 'translate-x-0' : ''}
               hover:translate-x-0"  
-     />
+       />
    </div>
  </div>
  
