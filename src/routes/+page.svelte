@@ -1,7 +1,7 @@
 <script>
 	import Hero from "$lib/components/Hero.svelte";
-	import Test from "$lib/components/test.svelte";
-	import Wl from "$lib/components/wl.svelte";
+	import Test from "$lib/components/Test.svelte";
+	import About from "$lib/components/About.svelte";
 	import Playlist from "$lib/components/Playlist.svelte";
   </script>
 
@@ -9,7 +9,7 @@
 	<div class="flex flex-grow flex-col">
 	  <Hero />
 	  <Test />
-	  <Wl />
+	  <About />
 	  <Playlist />
 	</div>
   </div>
