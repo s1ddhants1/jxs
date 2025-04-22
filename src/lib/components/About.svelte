@@ -10,7 +10,7 @@
       />
     </div>
 
-    <div class="bg-radial-wine z-0 h-screen w-full flex items-center justify-center text-white">
+    <div class="z-0 h-screen w-full flex items-center justify-center text-white">
       <p class="text-4xl font-serif backdrop-blur-sm px-6 py-3 rounded-lg">Wine & Lavender </p>
        </div>
 
