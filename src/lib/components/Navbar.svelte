@@ -5,7 +5,7 @@
   import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
 
   import { writable } from "svelte/store";
-  import { darkMode } from '$lib/stores/theme.js';
+  import { theme } from '$lib/stores/theme.js';
 
  // Nav Item #1 Audio Toggle function
   let audioElement: HTMLAudioElement;
@@ -27,11 +27,11 @@
   };
 
  // Nav Item #1 Dark Mode Toggle function
-  function toggleDarkMode() {
-    darkMode.update(mode => (mode === 'dark' ? 'light' : 'dark'));
-  }
+ const toggleTheme = () => {
+    theme.update(current => current === 'light' ? 'dark' : 'light');
+  };
 
-  $: isDark = $darkMode === 'dark';
+ // $: isDark = $darkMode === 'dark';
 
  // Nav Item #3 Menu Toggle function
   let isMenuOpen = writable(false);
@@ -50,13 +50,21 @@
     <button 
     on:click={toggleAudio}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
-      <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+    {#if !isPlaying}
+    <FontAwesomeIcon icon={faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+  {:else}
+    <FontAwesomeIcon icon={faPause} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+  {/if}  
     </button>
 
     <button 
-    on:click={toggleDarkMode}
+    on:click={toggleTheme}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
-      <FontAwesomeIcon icon={isDark ? faSun : faMoon} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+    {#if $theme === 'light'}
+    <FontAwesomeIcon icon={faMoon} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+  {:else}
+    <FontAwesomeIcon icon={faSun} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+  {/if}
     </button>
 
     <div class="relative">
