@@ -23,13 +23,13 @@
 
 <section
   bind:this={sectionRef}
-  class="h-screen overflow-hidden"
+  class="relative w-full h-screen overflow-hidden"
 >
   <!-- Kim slides in from left -->
   <img
     src="/kim.webp"
     alt="Kim"
-    class="z-10 scale-50 absolute left-0 h-[70vh] max-h-[500px] object-contain transition-all duration-700 ease-out"
+    class="z-10 scale-50 absolute left-0 h-[70vh] max-h-[500px] object-contain transition-all duration-2000 ease-in-out"
     class:translate-x-0={sectionVisible}
     class:-translate-x-full={!sectionVisible}
   />
@@ -38,7 +38,7 @@
   <img
     src="/olaf.webp"
     alt="Olaf"
-    class="z-10 scale-50 absolute right-0 h-[70vh] max-h-[500px] object-contain transition-all duration-700 ease-out"
+    class="z-10 scale-50 absolute right-0 h-[70vh] max-h-[500px] object-contain transition-all duration-2000 ease-in-out"
     class:translate-x-0={sectionVisible}
     class:translate-x-full={!sectionVisible}
   />
