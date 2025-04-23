@@ -9,8 +9,7 @@
    <div 
      class="absolute z-10 left-0 top-1/2 -translate-y-1/2"
      role="img"
-     on:touchstart={() => kimPeeking = true}
-     on:touchend={() => kimPeeking = false}
+     on:click={() => kimPeeking = !kimPeeking}
      on:mouseenter={() => kimPeeking = true}
      on:mouseleave={() => kimPeeking = false}
     >
@@ -35,8 +34,7 @@
    <div 
      class="absolute z-10 right-0 top-1/2 -translate-y-1/2"
      role="img"
-     on:touchstart={() => olafPeeking = true}
-     on:touchend={() => olafPeeking = false}
+     on:click={() => olafPeeking = !olafPeeking}
      on:mouseenter={() => olafPeeking = true}
      on:mouseleave={() => olafPeeking = false}
    >
