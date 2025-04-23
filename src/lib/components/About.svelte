@@ -1,4 +1,4 @@
-<script>
+<script lang="ts" >
    // State for touch/hover interactions
    let kimPeeking = false;
    let olafPeeking = false;
@@ -9,7 +9,6 @@
    <div 
      class="absolute z-10 left-0 top-1/2 -translate-y-1/2"
      role="img"
-     on:click={() => kimPeeking = !kimPeeking}
      on:mouseenter={() => kimPeeking = true}
      on:mouseleave={() => kimPeeking = false}
     >
@@ -34,7 +33,6 @@
    <div 
      class="absolute z-10 right-0 top-1/2 -translate-y-1/2"
      role="img"
-     on:click={() => olafPeeking = !olafPeeking}
      on:mouseenter={() => olafPeeking = true}
      on:mouseleave={() => olafPeeking = false}
    >
