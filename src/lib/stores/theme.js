@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 const getInitialTheme = () => {
-  if (typeof window === 'undefined') return 'light';
+  if (typeof window === 'undefined') return 'dark';
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) return savedTheme;
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';

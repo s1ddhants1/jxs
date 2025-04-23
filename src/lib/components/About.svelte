@@ -3,6 +3,9 @@
   import { onMount } from 'svelte';
 
   let sectionVisible = false;
+  /**
+	 * @type {Element}
+	 */
   let sectionRef;
 
   onMount(() => {

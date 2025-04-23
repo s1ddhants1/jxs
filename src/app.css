@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
 	font-family: "LondonBetween";
 	src: url("/fonts/LondonBetween.woff") format("woff");

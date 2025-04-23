@@ -1,4 +1,11 @@
 <script lang="ts">
+  import { theme } from '../lib/stores/theme.js';
+  
+  // Initialize theme
+  $: if (typeof document !== 'undefined') {
+    document.documentElement.classList.toggle('dark', $theme === 'dark');
+  }
+
   import "../app.css";
   import Navbar from "$lib/components/Navbar.svelte";
   import Footer from "$lib/components/Footer.svelte";
