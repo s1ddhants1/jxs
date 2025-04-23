@@ -1,50 +1,52 @@
-<script lang="ts" >
-   // State for touch/hover interactions
-   let kimPeeking = false;
-   let olafPeeking = false;
- </script>
- 
- <div class="relative h-screen overflow-hidden touch-none">
-   <!-- Mr. Kim (left) -->
-   <div 
-     class="absolute z-10 left-0 top-1/2 -translate-y-1/2"
-     role="img"
-     on:mouseenter={() => kimPeeking = true}
-     on:mouseleave={() => kimPeeking = false}
-    >
 
-     <img 
-       src="/kim.webp" 
-       alt="Mr. Kim"
-       class="h-40 md:h-64 -translate-x-[36%] transition-transform duration-300
-              {kimPeeking ? 'translate-x-0' : ''}
-              hover:translate-x-0" 
-     />
-   </div>
- 
-   <!-- Center content -->
-   <div class="z-0 h-screen w-full flex items-center justify-center text-white">
-     <p class="text-4xl font-serif backdrop-blur-sm px-6 py-3 rounded-lg">
-       Fun Times
-     </p>
-   </div>
- 
-   <!-- Olaf (right) -->
-   <div 
-     class="absolute z-10 right-0 top-1/2 -translate-y-1/2"
-     role="img"
-     on:mouseenter={() => olafPeeking = true}
-     on:mouseleave={() => olafPeeking = false}
-   >
-     <img 
-       src="/olaf.webp" 
-       alt="Olaf"
-       class="h-40 md:h-64 translate-x-[20%] transition-transform duration-300
-              {olafPeeking ? 'translate-x-0' : ''}
-              hover:translate-x-0"  
-       />
-   </div>
- </div>
- 
- <style>
- </style>
+<script>
+  import { onMount } from 'svelte';
+
+  let sectionVisible = false;
+  let sectionRef;
+
+  onMount(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        sectionVisible = entries[0].isIntersecting;
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef) observer.observe(sectionRef);
+
+    return () => {
+      if (sectionRef) observer.unobserve(sectionRef);
+    };
+  });
+</script>
+
+<section
+  bind:this={sectionRef}
+  class="h-screen overflow-hidden"
+>
+  <!-- Kim slides in from left -->
+  <img
+    src="/kim.webp"
+    alt="Kim"
+    class="z-10 scale-50 absolute left-0 h-[70vh] max-h-[500px] object-contain transition-all duration-700 ease-out"
+    class:translate-x-0={sectionVisible}
+    class:-translate-x-full={!sectionVisible}
+  />
+
+  <!-- Olaf slides in from right -->
+  <img
+    src="/olaf.webp"
+    alt="Olaf"
+    class="z-10 scale-50 absolute right-0 h-[70vh] max-h-[500px] object-contain transition-all duration-700 ease-out"
+    class:translate-x-0={sectionVisible}
+    class:translate-x-full={!sectionVisible}
+  />
+</section>
+
+<!-- Center content -->
+<div class="z-0 h-screen flex items-center justify-center text-white">
+  <p class="text-4xl font-serif backdrop-blur-sm px-6 py-3 rounded-lg">
+    Fun Times
+  </p>
+</div>
