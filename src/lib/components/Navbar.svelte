@@ -5,7 +5,7 @@
   import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
 
   import { writable } from "svelte/store";
-  import { darkMode } from '../stores/theme.js';
+  import { darkMode } from '$lib/stores/theme.js';
 
  // Nav Item #1 Audio Toggle function
   let audioElement: HTMLAudioElement;

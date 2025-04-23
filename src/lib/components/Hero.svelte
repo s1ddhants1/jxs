@@ -1,12 +1,10 @@
 <script>
-   //import { darkMode } from '$lib/stores/theme.js';
-   
 </script>
 
 <div class="bg-gradient-to-br from-pink-100 to-cyan-100 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900 transition-colors duration-500">
 <div class="w-full min-h-screen dark:text-gray"> 
   
-  <div class="intro mt-50 text-center">
+  <div class="intro mt-30 md:mt-40 text-center">
     <h2 class="font-[LondonBetween] text-5xl text-gray-800 dark:text-gray-300 font-bold">
       Jenny<br>&<br>Siddhant
     </h2>
