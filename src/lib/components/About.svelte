@@ -39,7 +39,7 @@
 
 <!-- Center content -->
 <div class="flex items-center justify-center text-black dark:text-white">
-  <p class="text-4xl backdrop-blur-sm rounded-lg">
+  <p class="font-[LondonBetween] text-4xl backdrop-blur-sm rounded-lg">
     Fun Times!
   </p>
 </div>
