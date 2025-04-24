@@ -1,5 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { fade, fly } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
   import { writable } from "svelte/store";
   import { theme } from '$lib/stores/theme.js';
 
@@ -96,11 +98,46 @@
         <div
         bind:this={menuElement}
         role="menu" 
-        class="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
-          <a href="/" class="hover:text-neutral-600 dark:hover:text-neutral-300">Home</a>
-          <a href="/valentine" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
-        </div>
-      {/if}
+        transition:fly={{ y: -10, duration: 200, easing: quintOut }}
+        class="absolute right-0 mt-4 w-35 backdrop-blur-xl bg-white/20 dark:bg-neutral-800/20 text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700 p-2 rounded-xl shadow-lg flex flex-col space-y-2 z-50">
+         
+        <a href="/"
+          role="menuitem" 
+          class="hover:text-neutral-600 dark:hover:text-neutral-300">
+            <span class="w-2 h-2 rounded-full bg-current opacity-70"></span>
+              <span>Home</span>
+          </a>
+
+          <div class="border-t border-neutral-200 dark:border-neutral-700 my-1"></div>
+
+          <a href="/valentine" 
+          role="menuitem" 
+          class="hover:text-neutral-600 dark:hover:text-neutral-300">
+            <span class="w-2 h-2 rounded-full bg-current opacity-70"></span>
+              <span>Valentine</span>
+           </a>
+        
+       </div>
+       {/if}
     </div>
   </nav>
 </header>
+
+<style>
+  /* Enhanced blur transitions */
+  .backdrop-blur-xl {
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Menu item animations */
+  [role="menuitem"] {
+    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                background-color 0.2s ease;
+  }
+  
+  /* Better focus states for accessibility */
+  button:focus-visible, a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+</style>
