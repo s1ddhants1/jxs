@@ -17,7 +17,7 @@
       A little place on the internet to celebrate us!
     </h4>
 
-<!-- Optional decorative elements -->
+<!-- bouncy ballz -->
 <div class="mt-10 flex justify-center space-x-8 pt-6 opacity-80">
   <div class="w-8 h-8 rounded-full bg-pink-300 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
   <div class="w-8 h-8 rounded-full bg-cyan-300 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>

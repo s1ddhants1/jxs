@@ -13,7 +13,7 @@
 
 <div>
   <Navbar />
-  <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll position-relative'>
+  <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll relative'>
   <slot />
   </div>
 </div>
