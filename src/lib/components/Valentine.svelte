@@ -3,7 +3,7 @@
   let delay = 0;
 </script>
 
-<div class="fixed inset-0 -z-10 overflow-hidden">
+<div class="fixed inset-0 z-10 overflow-hidden">
   <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
     <source src="/bg.mp4" type="video/mp4" />
     Your browser does not support the video tag.
