@@ -1,12 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { writable } from "svelte/store";
+  import { theme } from '$lib/stores/theme.js';
+
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
   import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
 
-  import { writable } from "svelte/store";
-  import { theme } from '$lib/stores/theme.js';
-
+ 
  // Nav Item #1 Audio Toggle function
   let audioElement: HTMLAudioElement;
   let isPlaying = false;
@@ -35,11 +36,26 @@
 
  // Nav Item #3 Menu Toggle function
   let isMenuOpen = writable(false);
+  let menuButton: HTMLButtonElement;
+  let menuElement: HTMLDivElement;
 
   function toggleMenu() {
     isMenuOpen.update(value => !value);
   }
 
+  function handleClickOutside(event: MouseEvent) {
+    if (menuElement && !menuElement.contains(event.target as Node) && 
+        menuButton && !menuButton.contains(event.target as Node)) {
+      isMenuOpen.set(false);
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  });
 </script>
 
 <header class="flex top-0 justify-between items-center sticky w-full backdrop-blur-md shadow-md p-2 z-50 transition-colors duration-300 dark:text-white">
@@ -69,12 +85,18 @@
 
     <div class="relative">
       <button on:click={toggleMenu}
+      aria-label="Toggle menu"
+      aria-expanded={$isMenuOpen}
+      bind:this={menuButton}
       class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
         <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl" />
       </button>
 
       {#if $isMenuOpen}
-        <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
+        <div
+        bind:this={menuElement}
+        role="menu" 
+        class="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 p-2 rounded-md shadow-md flex flex-col space-y-2 z-50">
           <a href="/" class="hover:text-neutral-600 dark:hover:text-neutral-300">Home</a>
           <a href="/valentine" class="hover:text-neutral-600 dark:hover:text-neutral-300">Valentine</a>
         </div>
