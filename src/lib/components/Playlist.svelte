@@ -2,7 +2,7 @@
     let currentPlaylist = "5y3UShsEvgcXVlHyfcVfSe";
     let playlistTheme = "0"; // 0 for dark, 1 for light
 
-    // Button states
+  // Button states
   let saveButtonText = "Save Playlist";
   let shareButtonText = "Share";
   let isCopied = false;
