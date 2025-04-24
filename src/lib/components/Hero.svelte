@@ -1,7 +1,6 @@
 <script>
 </script>
 
-<div class="bg-gradient-to-br from-pink-100 to-cyan-100 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900 transition-colors duration-500">
 <div class="w-full min-h-screen dark:text-gray"> 
   
   <div class="intro mt-30 md:mt-40 text-center">
@@ -25,7 +24,6 @@
 </div>
 
   </div>
-</div>
 </div>
 
 <style>

@@ -48,8 +48,8 @@
 </section>
 
 <!-- Center content -->
-<div class="z-10 relative flex items-center justify-center text-white">
-  <p class="text-4xl font-serif backdrop-blur-sm px-6 py-3 rounded-lg">
+<div class="z-10 relative flex items-center justify-center text-black dark:text-white">
+  <p class="text-4xl backdrop-blur-sm px-6 py-3 rounded-lg">
     Fun Times
   </p>
 </div>

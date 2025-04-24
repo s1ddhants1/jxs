@@ -39,7 +39,7 @@
   };    
   </script>
   
-  <div class="w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-900 via-black to-rose-900">
+  <div class="w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-900 via-white to-rose-900 dark:bg-gradient-to-br dark:from-rose-900 dark:via-black dark:to-rose-900">
    
         <p class="text-[50px] font-bold bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-transparent z-0">
             PLAYLIST
@@ -68,7 +68,7 @@
 
       <button 
       on:click={sharePlaylist}
-      class="px-4 py-2 rounded-lg bg-transparent border border-rose-800 hover:bg-rose-900/50 text-rose-100 transition-colors"
+      class="px-4 py-2 rounded-lg bg-transparent border border-rose-800 hover:bg-rose-900/50 text-black dark:text-white transition-colors"
       aria-label="Save playlist to Spotify">
       {shareButtonText}
       </button>
