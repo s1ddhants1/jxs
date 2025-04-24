@@ -11,12 +11,23 @@
   import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<div class="bg-gradient-to-br from-pink-200 to-cyan-200 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900 transition-colors duration-500">
+<div class="bg-gradient-to-br from-pink-300 to-cyan-300 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900 transition-colors duration-500">
   <Navbar />
   <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll relative'>
   <slot />
   </div>
  <Footer />
 </div>
+
 <style>
+  div {
+    background-size: 200% 200%;
+    animation: gradient 12s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 </style>

@@ -7,7 +7,7 @@
   let shareButtonText = "Share";
   let isCopied = false;
 
-  // Save to localStorage
+  // Save to localStorage (TBD)
   const savePlaylist = null
   saveButtonText = "Save";
 
@@ -76,7 +76,6 @@
   </div>
   
   <style>
-
     div {
       background-size: 200% 200%;
       animation: gradient 12s ease infinite;
