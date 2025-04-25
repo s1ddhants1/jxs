@@ -39,7 +39,7 @@
   };    
   </script>
   
-  <section class="w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-900 via-rose-100 to-rose-900 dark:bg-gradient-to-br dark:from-rose-900 dark:via-black dark:to-rose-900">
+  <section class="w-full min-h-screen rounded-xl flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-900 via-rose-100 to-rose-900 dark:bg-gradient-to-br dark:from-rose-900 dark:via-black dark:to-rose-900">
    
         <p class="text-[50px] font-bold bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-transparent z-0">
             PLAYLIST
