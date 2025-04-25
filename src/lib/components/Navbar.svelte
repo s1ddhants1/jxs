@@ -61,17 +61,17 @@
 </script>
 
 <header class="flex top-0 justify-between items-center sticky w-full backdrop-blur-md shadow-md p-2 z-50 transition-colors duration-300 dark:text-white">
-  <a href="/" class="font-[LondonBetween] text-xl font-bold pl-3">JxS</a>
+  <a href="/" class="font-[LondonBetween] text-xl md:text-3xl font-bold pl-3 md:p-6">JxS</a>
 
-  <nav class="relative flex items-center space-x-4">
+  <nav class="relative flex items-center space-x-4 md:space-x-6">
 
     <button 
     on:click={toggleAudio}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
     {#if !isPlaying}
-    <FontAwesomeIcon icon={faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+    <FontAwesomeIcon icon={faPlay} class="text-neutral-900 dark:text-neutral-100 text-xl md:text-2xl" />
   {:else}
-    <FontAwesomeIcon icon={faPause} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+    <FontAwesomeIcon icon={faPause} class="text-neutral-900 dark:text-neutral-100 text-xl md:text-2xl" />
   {/if}  
     </button>
 
@@ -79,9 +79,9 @@
     on:click={toggleTheme}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
     {#if $theme === 'light'}
-    <FontAwesomeIcon icon={faMoon} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+    <FontAwesomeIcon icon={faMoon} class="text-neutral-900 dark:text-neutral-100 text-x md:text-2xl" />
   {:else}
-    <FontAwesomeIcon icon={faSun} class="text-neutral-900 dark:text-neutral-100 text-xl" />
+    <FontAwesomeIcon icon={faSun} class="text-neutral-900 dark:text-neutral-100 text-xl md:text-2xl" />
   {/if}
     </button>
 
@@ -91,7 +91,7 @@
       aria-expanded={$isMenuOpen}
       bind:this={menuButton}
       class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
-        <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl" />
+        <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl md:text-3xl" />
       </button>
 
       {#if $isMenuOpen}

@@ -1,17 +1,19 @@
 <script>
 </script>
 
-<section class="relative w-full min-h-screen dark:text-gray"> 
+<section class="relative w-full min-h-screen overflow-hidden"> 
   
-  <div class="intro mt-30 md:mt-40 text-center">
-    <h2 class="font-[LondonBetween] font-bold text-4xl md:text-5xl text-gray-800 dark:text-gray-300">
-      Jenny<br>&<br>Siddhant
+  <div class="intro pt-30 md:pt-30 text-center">
+    <h2 class="font-[LondonBetween] font-bold text-4xl md:text-6xl text-gray-800 dark:text-gray-300">
+      <span class="block md:inline">Jenny</span>
+      <span class="block md:inline">&</span>
+      <span class="block md:inline">Siddhant</span>
     </h2>
-    <h3 class="relative font-[LondonBetween] text-6xl md:text-7xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
+    <h3 class="relative font-[LondonBetween] text-6xl md:text-7xl md:mt-5 leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
       Forever<br>
-      <span class="inline-block ">❤️</span>
+      <span class="inline-block md:mt-2">❤️</span>
     </h3>
-    <h4 class="font-[LondonBetween] text-base mt-8 text-gray-800 dark:text-gray-300">
+    <h4 class="font-[LondonBetween] text-base md:text-2xl mt-8 text-gray-800 dark:text-gray-300">
       A little place on the internet to celebrate us!
     </h4>
 

@@ -1,6 +1,7 @@
 <script>
 </script>
 
+<section class="w-full h-screen overflow-hidden">
 <div class="h-screen fixed inset-0 z-10 overflow-hidden">
   <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
     <source src="/bg.mp4" type="video/mp4" />
@@ -8,7 +9,7 @@
   </video>
 </div>
 
-<div class="font-[LondonBetween] font-bold flex fixed mt-40 md:mt-40 z-20 w-full items-center justify-center"> 
+<div class="font-[LondonBetween] font-bold flex fixed p-40 md:mt-40 z-20 w-full items-center justify-center"> 
   <div class="typing-animation">
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">heyy nini!!</p>
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">would you like to...</p>
@@ -19,3 +20,4 @@
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">I love you &lt;3</p>
   </div>
 </div>
+</section>
