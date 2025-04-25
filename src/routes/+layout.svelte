@@ -11,7 +11,7 @@
   import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<div class="bg-gradient-to-br from-pink-300 to-cyan-300 text-gray-800 dark:bg-gradient-to-br dark:from-neutral-800 dark:to-neutral-900 transition-colors duration-500">
+<div class="bg-gradient-to-br from-pink-300 to-cyan-300 text-gray-800 dark:bg-gradient-to-br dark:from-black dark:to-neutral-800 transition-colors duration-500">
   <Navbar />
   <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full overflow-y-scroll relative'>
   <slot />

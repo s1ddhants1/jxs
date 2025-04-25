@@ -1,13 +1,13 @@
 <script>
 </script>
 
-<div class="w-full min-h-screen dark:text-gray"> 
+<section class="relative w-full min-h-screen dark:text-gray"> 
   
   <div class="intro mt-30 md:mt-40 text-center">
-    <h2 class="font-[LondonBetween] text-5xl text-gray-800 dark:text-gray-300 font-bold">
+    <h2 class="font-[LondonBetween] text-4xl text-gray-800 dark:text-gray-300 font-bold">
       Jenny<br>&<br>Siddhant
     </h2>
-    <h3 class="font-[LondonBetween] text-7xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
+    <h3 class="font-[LondonBetween] text-6xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
       Forever<br>
       <span class="inline-block transform hover:scale-110 transition-transform duration-300">❤️</span>
     </h3>
@@ -18,10 +18,10 @@
 
 <!-- bouncy ballz -->
 <div class="mt-10 flex justify-center space-x-8 pt-6 opacity-80">
-  <div class="w-8 h-8 rounded-full bg-pink-300 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
-  <div class="w-8 h-8 rounded-full bg-cyan-300 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
-  <div class="w-8 h-8 rounded-full bg-pink-300 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
+  <div class="w-8 h-8 rounded-full bg-pink-600 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
+  <div class="w-8 h-8 rounded-full bg-cyan-600 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
+  <div class="w-8 h-8 rounded-full bg-pink-600 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
 </div>
 
   </div>
-</div>
+</section>
