@@ -9,11 +9,11 @@
   </video>
 </div>
 
-<div class="font-[LondonBetween] font-bold flex fixed p-40 md:mt-40 z-20 w-full items-center justify-center"> 
+<div class="font-[LondonBetween] font-bold text-nowrap flex fixed p-40 md:mt-40 z-20 w-full items-center justify-center"> 
   <div class="typing-animation">
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">heyy nini!!</p>
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">would you like to...</p>
-    <p class="text-5xl md:text-6xl leading-15 bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-transparent font-bold">
+    <p class="text-4xl md:text-6xl leading-15 bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-transparent font-bold">
       Be My Valentine?
     </p>
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">...please?</p>
