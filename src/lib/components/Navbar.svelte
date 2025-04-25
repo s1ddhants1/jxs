@@ -79,7 +79,7 @@
     on:click={toggleTheme}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
     {#if $theme === 'light'}
-    <FontAwesomeIcon icon={faMoon} class="text-neutral-900 dark:text-neutral-100 text-x md:text-2xl" />
+    <FontAwesomeIcon icon={faMoon} class="text-neutral-900 dark:text-neutral-100 text-xl md:text-2xl" />
   {:else}
     <FontAwesomeIcon icon={faSun} class="text-neutral-900 dark:text-neutral-100 text-xl md:text-2xl" />
   {/if}
