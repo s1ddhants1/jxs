@@ -18,9 +18,9 @@
 
 <!-- bouncy ballz -->
 <div class="mt-10 flex justify-center space-x-8 pt-6 opacity-80">
-  <div class="w-8 h-8 rounded-full bg-pink-600 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
-  <div class="w-8 h-8 rounded-full bg-cyan-600 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
-  <div class="w-8 h-8 rounded-full bg-pink-600 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
+  <div class="w-8 h-8 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
+  <div class="w-8 h-8 rounded-full bg-cyan-500 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
+  <div class="w-8 h-8 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
 </div>
 
   </div>

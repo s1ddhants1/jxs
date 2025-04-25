@@ -37,9 +37,9 @@
   />
 
 <!-- Center content -->
-<div class="flex items-center justify-center text-black dark:text-white">
-  <p class="font-[LondonBetween] text-4xl backdrop-blur-sm rounded-lg">
-    Fun Times!
+<div class="flex items-center justify-center">
+  <p class="text-[40px] font-bold bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text text-transparent z-0">
+    FUN TIMES!
   </p>
 </div>
 
