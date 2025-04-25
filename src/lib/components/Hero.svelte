@@ -4,14 +4,13 @@
 <section class="relative w-full min-h-screen dark:text-gray"> 
   
   <div class="intro mt-30 md:mt-40 text-center">
-    <h2 class="font-[LondonBetween] break-all sm:break-normal font-bold text-4xl text-gray-800 dark:text-gray-300">
+    <h2 class="font-[LondonBetween] font-bold text-4xl md:text-5xl text-gray-800 dark:text-gray-300">
       Jenny<br>&<br>Siddhant
     </h2>
-    <h3 class="relative font-[LondonBetween] text-6xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
+    <h3 class="relative font-[LondonBetween] text-6xl md:text-7xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
       Forever<br>
-      <span class="inline-block transform hover:scale-110 transition-transform duration-300 animate-heartbeat">❤️</span>
+      <span class="inline-block ">❤️</span>
     </h3>
-    
     <h4 class="font-[LondonBetween] text-base mt-8 text-gray-800 dark:text-gray-300">
       A little place on the internet to celebrate us!
     </h4>
@@ -37,5 +36,6 @@
   }
   .animate-heartbeat {
     animation: heartbeat 1.5s ease-in-out infinite;
+    will-change: transform;
   }
 </style>
