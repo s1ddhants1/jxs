@@ -4,7 +4,7 @@
 <section class="relative w-full min-h-screen dark:text-gray"> 
   
   <div class="intro mt-30 md:mt-40 text-center">
-    <h2 class="font-[LondonBetween] text-4xl text-gray-800 dark:text-gray-300 font-bold">
+    <h2 class="font-[LondonBetween] break-all sm:break-normal font-bold text-4xl text-gray-800 dark:text-gray-300">
       Jenny<br>&<br>Siddhant
     </h2>
     <h3 class="font-[LondonBetween] text-6xl leading-20 bg-gradient-to-r from-pink-700 via-pink-500 to-pink bg-clip-text text-transparent font-bold">
