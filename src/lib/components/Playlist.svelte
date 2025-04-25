@@ -76,7 +76,7 @@
   </section>
   
   <style>
-    div {
+    section {
       background-size: 200% 200%;
       animation: gradient 12s ease infinite;
     }
