@@ -1,9 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { fade, fly } from 'svelte/transition';
-  import { quintOut } from 'svelte/easing';
+  import { page } from '$app/stores';
   import { writable } from "svelte/store";
   import { theme } from '$lib/stores/theme.js';
+
+  import { fade, fly } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
 
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +19,7 @@
 
   onMount(() => {
     audioElement = new Audio(audioSource);
-    return () => audioElement.pause(); // Cleanup
+    return () => audioElement.pause();
   });
 
   const toggleAudio = () => {
@@ -33,8 +35,6 @@
  const toggleTheme = () => {
     theme.update(current => current === 'light' ? 'dark' : 'light');
   };
-
- // $: isDark = $darkMode === 'dark';
 
  // Nav Item #3 Menu Toggle function
   let isMenuOpen = writable(false);
@@ -64,7 +64,7 @@
   <a href="/" class="font-[LondonBetween] text-xl md:text-3xl font-bold pl-3 md:p-6">JxS</a>
 
   <nav class="relative flex items-center space-x-4 md:space-x-6">
-
+    {#if $page.url.pathname === '/valentine'}
     <button 
     on:click={toggleAudio}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
@@ -74,7 +74,7 @@
     <FontAwesomeIcon icon={faPause} class="text-neutral-900 dark:text-neutral-100 text-xl md:text-2xl" />
   {/if}  
     </button>
-
+  {/if}
     <button 
     on:click={toggleTheme}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
