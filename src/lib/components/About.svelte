@@ -23,7 +23,7 @@
   });
 </script>
 
-<section class="w-full min-h-screen rounded-xl flex flex-col items-center justify-center p-4 bg-gradient-to-br from-amber-200 via-white to-blue-200 dark:bg-gradient-to-br dark:from-amber-900/50 dark:via-black dark:to-white/30">
+<section class="w-full min-h-screen rounded-xl flex flex-col items-center justify-center bg-gradient-to-br from-amber-200 via-white to-blue-200 dark:bg-gradient-to-br dark:from-amber-900/50 dark:via-black dark:to-white/30">
 <div
   bind:this={sectionRef}
   class="relative w-full h-screen overflow-hidden"
