@@ -9,7 +9,7 @@
   </video>
 </div>
 
-<div class="font-[LondonBetween] font-bold text-nowrap flex fixed p-40 md:mt-40 z-20 w-full items-center justify-center"> 
+<div class="font-[LondonBetween] font-bold text-nowrap flex fixed p-40 z-20 w-full items-center justify-center"> 
   <div class="typing-animation">
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">heyy nini!!</p>
     <p class="text-xl md:text-3xl mt-1 text-white dark:text-white">would you like to...</p>

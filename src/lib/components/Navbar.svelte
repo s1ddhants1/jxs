@@ -20,7 +20,7 @@
   onMount(() => {
     audioElement = new Audio(audioSource);
     audioElement.loop = true;
-    return () => audioElement.pause();
+    return () => audioElement.play();
   });
 
   const toggleAudio = () => {
@@ -36,10 +36,12 @@
   if ($page.url.pathname === '/valentine') {
     if (audioElement && audioElement.paused) {
       audioElement.play();
+      isPlaying = true;
     }
   } else {
     if (audioElement) {
       audioElement.pause();
+      isPlaying = false;
     }
   }
 }
@@ -78,7 +80,7 @@
   <a href="/" class="font-[LondonBetween] text-xl md:text-3xl font-bold pl-3 md:p-6">JxS</a>
 
   <nav class="relative flex items-center space-x-4 md:space-x-6">
-    {#if $page.url.pathname === '/valentine'}
+  {#if $page.url.pathname === '/valentine'}
     <button 
     on:click={toggleAudio}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
@@ -89,6 +91,7 @@
   {/if}  
     </button>
   {/if}
+
     <button 
     on:click={toggleTheme}
     class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
@@ -100,7 +103,8 @@
     </button>
 
     <div class="relative">
-      <button on:click={toggleMenu}
+      <button 
+      on:click={toggleMenu}
       aria-label="Toggle menu"
       aria-expanded={$isMenuOpen}
       bind:this={menuButton}
