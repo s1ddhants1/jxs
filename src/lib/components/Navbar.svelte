@@ -45,7 +45,7 @@
 }
 
 
- // Nav Item #1 Dark Mode Toggle function
+ // Nav Item #2 Dark Mode Toggle function
  const toggleTheme = () => {
     theme.update(current => current === 'light' ? 'dark' : 'light');
   };
