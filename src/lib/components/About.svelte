@@ -23,7 +23,8 @@
   });
 </script>
 
-<section
+<section class="w-full min-h-screen rounded-xl flex flex-col items-center justify-center p-4 bg-gradient-to-br from-amber-200 via-white to-blue-200 dark:bg-gradient-to-br dark:from-amber-900/50 dark:via-black dark:to-white/30">
+<div
   bind:this={sectionRef}
   class="relative w-full h-screen overflow-hidden"
 >
@@ -38,7 +39,7 @@
 
 <!-- Center content -->
 <div class="flex items-center justify-center">
-  <p class="text-[40px] font-bold bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text text-transparent z-0">
+  <p class="text-[40px] mt-20 font-bold bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text text-transparent z-0">
     FUN TIMES!
   </p>
 </div>
@@ -51,4 +52,18 @@
     class:translate-x-0={sectionVisible}
     class:translate-x-full={!sectionVisible}
   />
+</div>
 </section>
+
+<style>
+  section {
+    background-size: 200% 200%;
+    animation: gradient 12s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style>
