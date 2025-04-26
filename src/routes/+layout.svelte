@@ -1,5 +1,4 @@
 <script lang="ts">
-  import SeasonalBackground from "$lib/components/Background.svelte";
   import { theme } from '../lib/stores/theme.js';
   
   // Initialize theme
@@ -12,13 +11,12 @@
   import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<div class="bg-gradient-to-br from-yellow-100 via-white to-amber-100 dark:bg-gradient-to-br dark:from-black dark:to-neutral-800 transition-colors duration-500">
-
-<Navbar />
+<div class="bg-gradient-to-br from-pink-300 to-cyan-300 text-gray-800 dark:bg-gradient-to-br dark:from-black dark:to-neutral-800 transition-colors duration-500">
+  <Navbar />
   <div class='min-h-screen flex flex-col overflow-x-hidden content-wrapper h-full relative'>
   <slot />
   </div>
-<Footer />
+ <Footer />
 </div>
 
 <style>
