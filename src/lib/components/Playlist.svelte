@@ -48,7 +48,7 @@
             for songs that make me think of Nini! 
         </p>
 
-    <div class="mt-10 w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+    <div class="mt-10 w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl">
       <iframe
         title="Spotify Playlist"
         src={`https://open.spotify.com/embed/playlist/${currentPlaylist}?utm_source=generator&theme=${playlistTheme}`}
