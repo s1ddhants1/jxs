@@ -19,6 +19,7 @@
 
   onMount(() => {
     audioElement = new Audio(audioSource);
+    audioElement.loop = true;
     return () => audioElement.pause();
   });
 
@@ -30,6 +31,19 @@
     }
     isPlaying = !isPlaying;
   };
+
+  $: {
+  if ($page.url.pathname === '/valentine') {
+    if (audioElement && audioElement.paused) {
+      audioElement.play();
+    }
+  } else {
+    if (audioElement) {
+      audioElement.pause();
+    }
+  }
+}
+
 
  // Nav Item #1 Dark Mode Toggle function
  const toggleTheme = () => {
