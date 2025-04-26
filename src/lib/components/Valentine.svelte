@@ -1,4 +1,22 @@
 <script>
+  import { onMount } from 'svelte';
+
+let lines;
+let delay = 0;
+
+onMount(() => {
+  lines = document.querySelectorAll('.typing-animation p');
+  lines.forEach((line) => {
+    setTimeout(() => {
+      line.style.width = line.scrollWidth + 'px';
+      line.style.opacity = 1;
+      setTimeout(() => {
+        line.style.borderRight = 'none';
+      }, 2000);
+    }, delay);
+    delay += 2500;
+  });
+});
 </script>
 
 <section class="w-full h-screen overflow-hidden">
@@ -21,3 +39,17 @@
   </div>
 </div>
 </section>
+
+<style>
+  .typing-animation p {
+    display: block;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid white;
+    width: 0;
+    margin: 0;
+    margin: 0.5rem 0;
+    transition: width 2s ease, opacity 1s ease;
+  }
+</style>
