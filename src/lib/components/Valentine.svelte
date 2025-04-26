@@ -8,9 +8,12 @@ onMount(() => {
   lines = document.querySelectorAll('.typing-animation p');
   lines.forEach((line) => {
     setTimeout(() => {
+      // @ts-ignore
       line.style.width = line.scrollWidth + 'px';
+      // @ts-ignore
       line.style.opacity = 1;
       setTimeout(() => {
+        // @ts-ignore
         line.style.borderRight = 'none';
       }, 2000);
     }, delay);
