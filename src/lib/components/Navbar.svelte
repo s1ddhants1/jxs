@@ -8,8 +8,7 @@
   import { quintOut } from 'svelte/easing';
 
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
-  import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
-  import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
+  import { faPlay, faPause, faMoon, faSun, faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
  
  // Nav Item #1 Audio Toggle function
@@ -56,17 +55,23 @@
   let isMenuOpen = writable(false);
   let menuButton: HTMLButtonElement;
   let menuElement: HTMLDivElement;
+  let isMenuIconChanging = false;
 
   function toggleMenu() {
-    isMenuOpen.update(value => !value);
-  }
+   isMenuIconChanging = true;
+  isMenuOpen.update(value => !value);
+  setTimeout(() => {
+    isMenuIconChanging = false;
+  }, 0);
+}
 
   function handleClickOutside(event: MouseEvent) {
-    if (menuElement && !menuElement.contains(event.target as Node) && 
-        menuButton && !menuButton.contains(event.target as Node)) {
-      isMenuOpen.set(false);
-    }
+    if (isMenuIconChanging) return;
+  if (menuElement && !menuElement.contains(event.target as Node) && 
+      menuButton && !menuButton.contains(event.target as Node)) {
+    isMenuOpen.set(false);
   }
+}
 
   onMount(() => {
     document.addEventListener('click', handleClickOutside);
@@ -109,7 +114,11 @@
       aria-expanded={$isMenuOpen}
       bind:this={menuButton}
       class="p-2 rounded-md transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700">
-        <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl md:text-3xl" />
+      {#if $isMenuOpen===false}
+      <FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100 text-2xl md:text-3xl" />
+       {:else}
+      <FontAwesomeIcon icon={faClose} class="text-neutral-900 dark:text-neutral-100 text-2xl md:text-3xl" />
+       {/if}  
       </button>
 
       {#if $isMenuOpen}
