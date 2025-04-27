@@ -128,7 +128,8 @@
 {#if $isMenuOpen}
 <div
 bind:this={menuElement}
-role="menu" 
+role="menu"
+transition:fly={{ y: -10, duration: 200, easing: quintOut }}
 class="absolute flex flex-col w-screen h-screen p-2 items-center rounded-xl backdrop-blur-md shadow-md text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
  
 <a href="/"
