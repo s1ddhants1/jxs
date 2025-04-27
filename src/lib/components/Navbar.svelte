@@ -117,11 +117,12 @@
         bind:this={menuElement}
         role="menu" 
         transition:fly={{ y: -10, duration: 200, easing: quintOut }}
-        class="absolute right-0 mt-4 w-35 backdrop-blur-xl bg-white/20 dark:bg-neutral-800/20 text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700 p-2 rounded-xl shadow-lg flex flex-col space-y-2 z-50">
+        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-103 md:mt-110 flex flex-col w-screen h-screen p-2 items-center rounded-xl shadow-lg z-10 backdrop-blur-xl bg-white/20 dark:bg-neutral-800/20 text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
          
         <a href="/"
+          on:click={toggleMenu}
           role="menuitem" 
-          class="hover:text-neutral-600 dark:hover:text-neutral-300">
+          class="mt-20 font-bold hover:text-pink-600 dark:hover:text-pink-400">
             <span class="w-2 h-2 rounded-full bg-current opacity-70"></span>
               <span>Home</span>
           </a>
@@ -129,8 +130,9 @@
           <div class="border-t border-neutral-200 dark:border-neutral-700 my-1"></div>
 
           <a href="/valentine" 
+          on:click={toggleMenu}
           role="menuitem" 
-          class="hover:text-neutral-600 dark:hover:text-neutral-300">
+          class="mt-4 font-bold hover:text-pink-600 dark:hover:text-pink-400">
             <span class="w-2 h-2 rounded-full bg-current opacity-70"></span>
               <span>Valentine</span>
            </a>
