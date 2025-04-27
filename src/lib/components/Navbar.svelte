@@ -126,7 +126,7 @@
         bind:this={menuElement}
         role="menu" 
         transition:fly={{ y: -10, duration: 200, easing: quintOut }}
-        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-103 md:mt-110 flex flex-col w-screen h-screen p-2 items-center rounded-xl shadow-lg z-10 backdrop-blur-xl bg-white/20 dark:bg-neutral-800/20 text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
+        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-103 md:mt-115 flex flex-col w-screen h-screen p-2 items-center rounded-xl shadow-lg z-10 backdrop-blur-xl bg-white/20 dark:bg-neutral-800/20 text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
          
         <a href="/"
           on:click={toggleMenu}
