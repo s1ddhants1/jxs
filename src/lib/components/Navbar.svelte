@@ -132,17 +132,15 @@
           on:click={toggleMenu}
           role="menuitem" 
           class="mt-20 font-bold hover:text-pink-600 dark:hover:text-pink-400">
-            <span class="w-2 h-2 rounded-full bg-current opacity-70"></span>
+            <span class="w-2 h-2 rounded-full"></span>
               <span>Home</span>
           </a>
-
-          <div class="border-t border-neutral-200 dark:border-neutral-700 my-1"></div>
 
           <a href="/valentine" 
           on:click={toggleMenu}
           role="menuitem" 
           class="mt-4 font-bold hover:text-pink-600 dark:hover:text-pink-400">
-            <span class="w-2 h-2 rounded-full bg-current opacity-70"></span>
+            <span class="w-2 h-2 rounded-full"></span>
               <span>Valentine</span>
            </a>
         
@@ -153,20 +151,7 @@
 </header>
 
 <style>
-  /* Menu item animations */
-  [role="menuitem"] {
-    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), 
-                background-color 0.2s ease;
-  }
-  
-  /* Better focus states for accessibility */
-  button:focus-visible, a:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
-
   .nav {
-
 		/* Mobile classes */
 		width: 100vw;
 		height: 100vh;
