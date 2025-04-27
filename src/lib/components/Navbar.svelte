@@ -120,42 +120,34 @@
       <FontAwesomeIcon icon={faClose} class="text-neutral-900 dark:text-neutral-100 text-2xl md:text-3xl" />
        {/if}  
       </button>
-
-      {#if $isMenuOpen}
-        <div
-        bind:this={menuElement}
-        role="menu" 
-        transition:fly={{ y: -10, duration: 200, easing: quintOut }}
-        class="nav fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-103 md:mt-115 flex flex-col w-screen h-screen p-2 items-center rounded-xl z-10 backdrop-blur-md shadow-md text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
-         
-        <a href="/"
-          on:click={toggleMenu}
-          role="menuitem" 
-          class="mt-20 font-bold hover:text-pink-600 dark:hover:text-pink-400">
-            <span class="w-2 h-2 rounded-full"></span>
-              <span>Home</span>
-          </a>
-
-          <a href="/valentine" 
-          on:click={toggleMenu}
-          role="menuitem" 
-          class="mt-4 font-bold hover:text-pink-600 dark:hover:text-pink-400">
-            <span class="w-2 h-2 rounded-full"></span>
-              <span>Valentine</span>
-           </a>
-        
-       </div>
-       {/if}
     </div>
   </nav>
 </header>
 
+{#if $isMenuOpen}
+<div
+bind:this={menuElement}
+role="menu" 
+class="absolute flex flex-col w-screen h-full p-2 items-center rounded-xl z-40 backdrop-blur-md shadow-md text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
+ 
+<a href="/"
+  on:click={toggleMenu}
+  role="menuitem" 
+  class="mt-20 font-bold hover:text-pink-600 dark:hover:text-pink-400">
+    <span class="w-2 h-2 rounded-full"></span>
+      <span>Home</span>
+  </a>
+
+  <a href="/valentine" 
+  on:click={toggleMenu}
+  role="menuitem" 
+  class="mt-4 font-bold hover:text-pink-600 dark:hover:text-pink-400">
+    <span class="w-2 h-2 rounded-full"></span>
+      <span>Valentine</span>
+   </a>
+
+</div>
+{/if}
+
 <style>
-  .nav {
-		/* Mobile classes */
-		width: 100vw;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.8);
-		backdrop-filter: blur(12px);
-	}
 </style>
