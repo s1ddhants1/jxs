@@ -81,7 +81,8 @@
   });
 </script>
 
-<header class="flex top-0 justify-between items-center sticky w-full backdrop-blur-md shadow-md p-2 z-50 transition-colors duration-300 dark:text-white">
+<section class="sticky z-50 top-0">
+<header class="flex justify-between items-center w-full backdrop-blur-md shadow-md p-2 transition-colors duration-300 dark:text-white">
   <a href="/" class="font-[LondonBetween] text-xl md:text-3xl font-bold pl-3 md:p-6">JxS</a>
 
   <nav class="relative flex items-center space-x-4 md:space-x-6">
@@ -128,7 +129,7 @@
 <div
 bind:this={menuElement}
 role="menu" 
-class="absolute flex flex-col w-screen h-full p-2 items-center rounded-xl z-40 backdrop-blur-md shadow-md text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
+class="absolute flex flex-col w-screen h-screen p-2 items-center rounded-xl backdrop-blur-md shadow-md text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700">
  
 <a href="/"
   on:click={toggleMenu}
@@ -148,6 +149,7 @@ class="absolute flex flex-col w-screen h-full p-2 items-center rounded-xl z-40 b
 
 </div>
 {/if}
+</section>
 
 <style>
 </style>
