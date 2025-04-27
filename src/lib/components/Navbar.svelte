@@ -145,7 +145,7 @@ class="absolute flex flex-col w-screen h-screen p-2 items-center rounded-xl back
   role="menuitem" 
   class="mt-4 font-bold hover:text-pink-600 dark:hover:text-pink-400">
     <span class="w-2 h-2 rounded-full"></span>
-      <span>Valentine</span>
+      <span>Valentine's</span>
    </a>
 
 </div>
