@@ -49,7 +49,7 @@ onMount(() => {
     opacity: 0;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid white;
+    border-right: .10em solid white;
     width: 0;
     margin: 0;
     margin: 0.5rem 0;
