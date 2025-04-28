@@ -1,5 +1,5 @@
 <script>
-	let characters = ['💕', '🩷', ''];
+	let characters = ['💕', '🩷', '💕', '🩷', '💖', '💗', '💓', '💘', '💝', '💞', '🌸'];
 
 	let confetti = $state(new Array(100)
 		.fill()
