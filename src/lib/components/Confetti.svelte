@@ -1,5 +1,5 @@
 <script>
-	let characters = ['💕', '🩷', '💖', '💗', '💓', '💘', '💝', '💞', '🌸'];
+	let characters = ['💕', '🩷', '💖', '💗', '💓', '💘', '💞', '🌸'];
 	let emojiCount = 45; // Optimal number for performance
 	
 	// Smooth animation state
@@ -107,7 +107,7 @@
 				}
 
 				// Calculate edge fading with smooth curve
-				const edgeMargin = 20;
+				const edgeMargin = 0;
 				const distFromEdgeX = Math.min(confetto.x, 100 - confetto.x);
 				const distFromEdgeY = Math.min(confetto.y, 100 - confetto.y);
 				confetto.edgeFactor = Math.min(1, Math.min(distFromEdgeX, distFromEdgeY) / edgeMargin);
