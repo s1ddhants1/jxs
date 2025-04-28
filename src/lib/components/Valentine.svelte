@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import Confetti from './Confetti.svelte';
 
 let lines;
 let delay = 0;
@@ -24,10 +25,7 @@ onMount(() => {
 
 <section class="w-full h-screen overflow-hidden">
 <div class="h-screen fixed inset-0 z-10 overflow-hidden">
-  <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
-    <source src="/bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <Confetti />
 </div>
 
 <div class="font-[LondonBetween] font-bold text-nowrap flex fixed p-40 z-20 w-full items-center justify-center"> 
