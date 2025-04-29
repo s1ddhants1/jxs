@@ -6,6 +6,7 @@
 <section class="relative w-full min-h-screen overflow-hidden"> 
 
 {#if $theme === 'dark'}
+<!-- Stars -->
   <div class="absolute top-0 left-0 w-full h-2/5 bg-opacity-30 overflow-hidden">
        <Stars />
   </div>
@@ -15,7 +16,6 @@
   <div class="absolute top-2 right-2 w-4 h-4 rounded-full bg-indigo-900/20" />
 </div>
 {/if}
-  
 
   <div class="intro pt-30 md:pt-30 text-center">
     <h2 class="font-[LondonBetween] font-bold text-4xl md:text-6xl text-gray-800 dark:text-gray-300">
@@ -31,13 +31,14 @@
       A little place on the internet to celebrate us!
     </h4>
 
+{#if $theme === 'light'}
 <!-- bouncy ballz -->
 <div class="mt-10 flex justify-center space-x-8 pt-6 opacity-80">
-  <div class="w-8 h-8 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
-  <div class="w-8 h-8 rounded-full bg-cyan-500 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
-  <div class="w-8 h-8 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
+  <div class="w-6 h-6 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
+  <div class="w-6 h-6 rounded-full bg-cyan-500 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
+  <div class="w-6 h-6 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
  </div>
-</div>
+{/if}
 </section>
 
 <style>
@@ -53,4 +54,18 @@
     animation: heartbeat 1.5s ease-in-out infinite;
     will-change: transform;
   }
+
+  @keyframes shimmer {
+      0%, 100% { transform: translate(0, 0); opacity: 0.05; }
+      25% { transform: translate(0.5rem, -0.3rem); opacity: 0.1; }
+      50% { transform: translate(-0.3rem, 0.2rem); opacity: 0.08; }
+      75% { transform: translate(0.2rem, 0.4rem); opacity: 0.12; }
+    }
+    
+    @keyframes beam {
+      0% { transform: rotate(45deg) scale(0.8); opacity: 0; }
+      20% { transform: rotate(45deg) scale(1); opacity: 0.1; }
+      50% { transform: rotate(45deg) scale(1.1); opacity: 0.05; }
+      100% { transform: rotate(45deg) scale(0.8); opacity: 0; }
+    }
 </style>
