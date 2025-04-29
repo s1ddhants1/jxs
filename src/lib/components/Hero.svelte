@@ -1,12 +1,21 @@
 <script>
+  import { theme } from '$lib/stores/theme.js';
   import Stars from '$lib/components/Stars.svelte';
 </script>
 
 <section class="relative w-full min-h-screen overflow-hidden"> 
 
-  <div class="absolute top-0 left-0 w-full h-1/5 bg-opacity-30 overflow-hidden">
+{#if $theme === 'dark'}
+  <div class="absolute top-0 left-0 w-full h-2/5 bg-opacity-30 overflow-hidden">
        <Stars />
   </div>
+
+<!-- Moon -->
+<div class="absolute top-10 right-10 w-16 h-16 rounded-full bg-yellow-100 shadow-lg shadow-yellow-100/30">
+  <div class="absolute top-2 right-2 w-4 h-4 rounded-full bg-indigo-900/20" />
+</div>
+{/if}
+  
 
   <div class="intro pt-30 md:pt-30 text-center">
     <h2 class="font-[LondonBetween] font-bold text-4xl md:text-6xl text-gray-800 dark:text-gray-300">
