@@ -27,7 +27,7 @@
   });
 </script>
 
-<div class="particles-container background-transparent z-10">
+<div class="particles-container background-transparent">
   <Particles
     id="tsparticles"
     options={particlesOptions}
