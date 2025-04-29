@@ -1,8 +1,9 @@
 <script>
+  import Stars from '$lib/components/Stars.svelte';
 </script>
 
 <section class="relative w-full min-h-screen overflow-hidden"> 
-
+<Stars/>
   <div class="intro pt-30 md:pt-30 text-center">
     <h2 class="font-[LondonBetween] font-bold text-4xl md:text-6xl text-gray-800 dark:text-gray-300">
       <span class="block md:inline">Jenny</span>
