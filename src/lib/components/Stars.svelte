@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { theme } from '$lib/stores/theme.js';
     import Particles, { particlesInit } from '@tsparticles/svelte';
     import { loadStarsPreset } from '@tsparticles/preset-stars';
 
@@ -27,6 +28,7 @@
   });
 </script>
 
+{#if $theme === 'dark'}
 <div class="particles-container background-transparent">
   <Particles
     id="tsparticles"
@@ -34,3 +36,4 @@
     init={particlesInit}
   />
 </div>
+{/if}
