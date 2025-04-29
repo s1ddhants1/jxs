@@ -40,7 +40,7 @@
 <!-- Center content -->
 <div class="flex items-center justify-center">
   <p class="text-[40px] mt-20 font-bold bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text text-transparent z-0">
-    Welcome!!
+    WELCOME!
   </p>
 </div>
 
