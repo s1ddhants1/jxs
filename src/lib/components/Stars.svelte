@@ -1,5 +1,5 @@
 <script lang="ts">
-let twinklingStars = Array(50).fill(0).map(() => ({
+let twinklingStars = Array(100).fill(0).map(() => ({
   x: Math.random() * 100,
   y: Math.random() * 100,
   size: Math.random() * 1.5 + 0.5,

@@ -54,18 +54,4 @@
     animation: heartbeat 1.5s ease-in-out infinite;
     will-change: transform;
   }
-
-  @keyframes shimmer {
-      0%, 100% { transform: translate(0, 0); opacity: 0.05; }
-      25% { transform: translate(0.5rem, -0.3rem); opacity: 0.1; }
-      50% { transform: translate(-0.3rem, 0.2rem); opacity: 0.08; }
-      75% { transform: translate(0.2rem, 0.4rem); opacity: 0.12; }
-    }
-    
-    @keyframes beam {
-      0% { transform: rotate(45deg) scale(0.8); opacity: 0; }
-      20% { transform: rotate(45deg) scale(1); opacity: 0.1; }
-      50% { transform: rotate(45deg) scale(1.1); opacity: 0.05; }
-      100% { transform: rotate(45deg) scale(0.8); opacity: 0; }
-    }
 </style>
