@@ -17,6 +17,9 @@ importers:
       '@fortawesome/svelte-fontawesome':
         specifier: ^0.2.3
         version: 0.2.3(@fortawesome/fontawesome-svg-core@6.7.2)(svelte@5.28.2)
+      '@tsparticles/basic':
+        specifier: ^3.8.1
+        version: 3.8.1
       '@tsparticles/engine':
         specifier: ^3.8.1
         version: 3.8.1

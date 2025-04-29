@@ -3,7 +3,11 @@
 </script>
 
 <section class="relative w-full min-h-screen overflow-hidden"> 
-<Stars />
+
+  <div class="absolute top-0 left-0 w-full h-1/5 bg-opacity-30 overflow-hidden">
+       <Stars />
+  </div>
+
   <div class="intro pt-30 md:pt-30 text-center">
     <h2 class="font-[LondonBetween] font-bold text-4xl md:text-6xl text-gray-800 dark:text-gray-300">
       <span class="block md:inline">Jenny</span>
@@ -23,9 +27,8 @@
   <div class="w-8 h-8 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.1s"></div>
   <div class="w-8 h-8 rounded-full bg-cyan-500 dark:bg-cyan-500 animate-bounce" style="animation-delay: 0.3s"></div>
   <div class="w-8 h-8 rounded-full bg-pink-500 dark:bg-pink-500 animate-bounce" style="animation-delay: 0.5s"></div>
+ </div>
 </div>
-
-  </div>
 </section>
 
 <style>

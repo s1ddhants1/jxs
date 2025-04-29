@@ -5,22 +5,7 @@
 
   let particlesOptions = {
     preset: "stars",
-    background: {
-      color: "transparent"
-    },
-    particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      move: {
-        enable: false,
-        speed: 0.5
-      }
-    }
+    background: {color: "transparent"},
   };
 
   void particlesInit(async (engine) => {
@@ -29,10 +14,10 @@
 </script>
 
 {#if $theme === 'dark'}
-<div class="particles-container background-transparent">
+<div class="particles-container w-full h-full background-transparent">
   <Particles
     id="tsparticles"
-    options={particlesOptions}
+    options={{ ...particlesOptions, fullScreen: false }}
     init={particlesInit}
   />
 </div>
