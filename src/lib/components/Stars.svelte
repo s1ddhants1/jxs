@@ -8,8 +8,15 @@
       color: "transparent"
     },
     particles: {
+      number: {
+        value: 100,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
       move: {
-        enable: true,
+        enable: false,
         speed: 0.5
       }
     }
