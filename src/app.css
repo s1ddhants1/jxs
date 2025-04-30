@@ -6,16 +6,16 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-	font-family: "LondonBetween";
-	src: url("/fonts/LondonBetween.woff") format("woff");
+	font-family: 'LondonBetween';
+	src: url('/fonts/LondonBetween.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-  }
-  
-  body {
+}
+
+body {
 	height: 100vh;
 	background-color: #181818;
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
-  }
+}
