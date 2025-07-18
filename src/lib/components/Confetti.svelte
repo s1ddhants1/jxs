@@ -1,5 +1,5 @@
 <script>
-	let characters = ['💕', '🩷', '💗', '💓', '💘', '💞', '🌸'];
+	let characters = ['💕', '🩷', '💗', '💓', '💘', '💞'];
 	let emojiCount = 45; // Optimal number for performance
 
 	// Smooth animation state
