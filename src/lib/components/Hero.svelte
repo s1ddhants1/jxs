@@ -1,6 +1,11 @@
 <script>
 	import { theme } from '$lib/stores/theme.js';
 	import Stars from '$lib/components/Stars.svelte';
+
+	// Nav Item #2 Dark Mode Toggle function
+	const toggleTheme = () => {
+		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
+	};
 </script>
 
 <section class="relative min-h-screen w-full overflow-hidden">
@@ -11,7 +16,8 @@
 		</div>
 
 		<!-- Moon -->
-		<div
+		 
+		<button on:click={toggleTheme}
 			class="absolute top-10 right-10 h-16 w-16 rounded-full bg-yellow-100 shadow-lg shadow-yellow-100/30"
 		>
 			<div class="absolute top-2 right-2 h-4 w-4 rounded-full bg-indigo-900/20" />
@@ -23,7 +29,7 @@
 			class="font-[LondonBetween] text-4xl font-bold text-gray-800 md:text-6xl dark:text-gray-300"
 		>
 			<span class="block md:inline">Jenny</span>
-			<span class="block md:inline">&</span>
+			<span class="block md:inline">X</span>
 			<span class="block md:inline">Siddhant</span>
 		</h2>
 		<h3

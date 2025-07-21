@@ -3,5 +3,5 @@
 </script>
 
 <footer class="mt-auto py-4 text-center text-black dark:text-white">
-	<p class="text-sm">&copy; {year} Made with love</p>
+	<p class="text-sm">&copy; {year} Just a Footer for now</p>
 </footer>
