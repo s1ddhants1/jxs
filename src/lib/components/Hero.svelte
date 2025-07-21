@@ -36,7 +36,7 @@
 		</button>
 	{/if}
 
-	<div class="intro pt-50 text-center md:pt-60">
+	<div class="intro pt-[22vh] text-center md:pt-60">
 		<h2
 			class="font-[LondonBetween] text-4xl font-bold text-gray-800 md:text-6xl dark:text-gray-300"
 		>
