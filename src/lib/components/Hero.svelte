@@ -98,7 +98,9 @@
 			Forever<br />
 			<span class="inline-block md:mt-2">❤️</span>
 		</h3>
-		<h4 class="mt-8 font-[LondonBetween] text-base text-gray-800 md:text-2xl dark:text-gray-300">
+		<h4
+			class="mt-8 font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
+		>
 			A little place on the internet to celebrate us!
 		</h4>
 	</div>
