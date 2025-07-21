@@ -1,4 +1,14 @@
 <script>
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import {
+		faPlay,
+		faPause,
+		faMoon,
+		faSun,
+		faBars,
+		faClose
+	} from '@fortawesome/free-solid-svg-icons';
+
 	import { theme } from '$lib/stores/theme.js';
 	import Stars from '$lib/components/Stars.svelte';
 
@@ -30,9 +40,47 @@
 		<!-- Sun -->
 		<button
 			on:click={toggleTheme}
-			class="absolute top-10 right-10 h-16 w-16 rounded-full text-center text-5xl shadow-lg shadow-yellow-200"
-			aria-label="Toggle dark mode"
-			>☀️
+			class="absolute top-10 right-10 flex h-18 w-18 items-center justify-center rounded-full bg-amber-200 shadow-lg shadow-yellow-300/70"
+			aria-label="Toggle light mode"
+		>
+			<!-- Central sun circle -->
+			<div class="relative flex h-14 w-14 items-center justify-center rounded-full bg-amber-100">
+				<!-- Sun rays -->
+				<div class="absolute inset-0 flex items-center justify-center">
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(0deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(45deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(90deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(135deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(180deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(225deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(270deg) translateY(-32px);"
+					></span>
+					<span
+						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
+						style="transform: rotate(315deg) translateY(-32px);"
+					></span>
+				</div>
+			</div>
 		</button>
 	{/if}
 
