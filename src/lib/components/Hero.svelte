@@ -1,14 +1,4 @@
 <script>
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import {
-		faPlay,
-		faPause,
-		faMoon,
-		faSun,
-		faBars,
-		faClose
-	} from '@fortawesome/free-solid-svg-icons';
-
 	import { theme } from '$lib/stores/theme.js';
 	import Stars from '$lib/components/Stars.svelte';
 
@@ -29,10 +19,10 @@
 
 		<button
 			on:click={toggleTheme}
-			class="absolute top-10 right-10 h-16 w-16 rounded-full bg-yellow-100 shadow-lg shadow-yellow-100/30"
+			class="absolute top-10 right-10 h-12 w-12 rounded-full bg-yellow-100 shadow-lg shadow-yellow-100/30 md:h-16 md:w-16"
 			aria-label="Toggle dark mode"
 		>
-			<div class="absolute top-2 right-2 h-4 w-4 rounded-full bg-indigo-900/20"></div>
+			<div class="absolute top-2 right-2 h-3 w-3 rounded-full bg-indigo-900/20 md:h-4 md:w-4"></div>
 		</button>
 	{/if}
 

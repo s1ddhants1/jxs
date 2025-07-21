@@ -7,7 +7,14 @@
 
 @font-face {
 	font-family: 'LondonBetween';
-	src: url('/fonts/LondonBetween.woff') format('woff');
+	src: url('/fonts/LondonBetween.woff2') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Icekingdom';
+	src: url('/fonts/Icekingdom.woff2') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
