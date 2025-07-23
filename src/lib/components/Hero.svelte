@@ -33,10 +33,10 @@
 			aria-label="Toggle light mode"
 		>
 			<!-- Sun glow layer -->
-			<div class="absolute z-0 h-20 w-20 rounded-full bg-yellow-300/40 blur-2xl"></div>
+			<div class="absolute z-0 h-20 w-20 rounded-full bg-amber-300/40 blur-2xl"></div>
 			<!-- Central sun circle -->
 			<div
-				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-200"
+				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-300"
 			>
 				<!-- Sun rays -->
 				<div class="relative h-24 w-24 md:h-32 md:w-32">
