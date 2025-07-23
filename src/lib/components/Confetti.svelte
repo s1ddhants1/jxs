@@ -84,7 +84,6 @@
 					}
 				}
 
-				// Update active emojis with smooth physics
 				if (confetto.state !== 'fading-out') {
 					confetto.targetX = confetto.x + confetto.speedX * deltaTime;
 					confetto.targetY = confetto.y + confetto.speedY * deltaTime;

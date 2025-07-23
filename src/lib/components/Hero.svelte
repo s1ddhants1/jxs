@@ -39,7 +39,7 @@
 				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-200"
 			>
 				<!-- Sun rays -->
-				<div class="relative h-32 w-32">
+				<div class="relative h-24 w-24 md:h-32 md:w-32">
 					<div class="absolute inset-0 flex items-center justify-center">
 						{#each Array.from({ length: 12 }) as _, i}
 							<span
