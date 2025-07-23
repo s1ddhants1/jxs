@@ -14,8 +14,14 @@
 		faMoon,
 		faSun,
 		faBars,
-		faClose
+		faClose,
+		faEyeSlash
 	} from '@fortawesome/free-solid-svg-icons';
+
+	let showNavbar = true;
+	function toggleNavbar() {
+		showNavbar = !showNavbar;
+	}
 
 	// Nav Item #1 Audio Toggle function
 	let audioElement: HTMLAudioElement;
@@ -90,7 +96,7 @@
 	});
 </script>
 
-<section class="sticky top-0 z-50">
+<section class="sticky top-0 z-50 {`navbar ${!showNavbar ? 'hidden' : ''}`}">
 	<header
 		class="flex w-full items-center justify-between p-2 shadow-md backdrop-blur-md transition-colors duration-300 dark:text-white"
 	>
@@ -183,6 +189,18 @@
 				<span class="h-2 w-2 rounded-full"></span>
 				<span>Valentine's</span>
 			</a>
+
+			<button
+				on:click={toggleNavbar}
+				aria-label="Toggle Navbar"
+				role="menuitem"
+				class="mt-6 font-bold hover:text-pink-600 dark:hover:text-pink-400"
+			>
+				<FontAwesomeIcon
+					icon={faEyeSlash}
+					class="text-xl text-neutral-900 md:text-2xl dark:text-neutral-100"
+				></FontAwesomeIcon>
+			</button>
 		</div>
 	{/if}
 </section>
