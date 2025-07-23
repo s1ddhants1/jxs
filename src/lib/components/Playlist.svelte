@@ -67,7 +67,7 @@
 	<div class="mt-8 flex gap-4">
 		<button
 			on:click={savePlaylist}
-			class="rounded-lg bg-rose-900 px-4 py-2 text-white transition-colors hover:bg-rose-800"
+			class="rounded-md bg-rose-900 px-4 py-2 font-semibold text-white shadow-md transition-colors hover:bg-rose-700 focus:ring-2 focus:ring-rose-500 focus:outline-none disabled:opacity-50"
 			aria-label="Save playlist on Spotify"
 		>
 			{saveButtonText}
@@ -75,7 +75,7 @@
 
 		<button
 			on:click={sharePlaylist}
-			class="rounded-lg border border-rose-800 bg-transparent px-4 py-2 text-black transition-colors hover:bg-rose-900/50 dark:text-white"
+			class="rounded-md border-2 border-rose-600 bg-transparent px-4 py-2 font-semibold text-white shadow-md transition-colors hover:bg-rose-600 hover:text-white focus:ring-2 focus:ring-rose-500 focus:outline-none disabled:opacity-50"
 			aria-label="Save playlist to Spotify"
 		>
 			{shareButtonText}

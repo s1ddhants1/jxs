@@ -43,8 +43,8 @@
 					<div class="absolute inset-0 flex items-center justify-center">
 						{#each Array.from({ length: 12 }) as _, i}
 							<span
-								class="absolute block h-1 w-4 rounded-full bg-yellow-200"
-								style="transform: rotate({i * 30}deg) translateY(-39px);"
+								class="absolute block h-1 w-10 rounded-full bg-yellow-200"
+								style="transform: rotate({i * 30}deg) translateY(-39px)"
 							></span>
 						{/each}
 					</div>
