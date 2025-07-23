@@ -29,14 +29,14 @@
 	{#if $theme === 'light'}
 		<button
 			on:click={toggleTheme}
-			class="absolute top-10 right-10 flex h-18 w-18 items-center justify-center rounded-full bg-amber-200 shadow-xl shadow-yellow-100"
+			class="absolute top-10 right-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-200 shadow-xl shadow-yellow-100 md:h-16 md:w-16"
 			aria-label="Toggle light mode"
 		>
 			<!-- Sun glow layer -->
 			<div class="absolute z-0 h-20 w-20 rounded-full bg-yellow-300/40 blur-2xl"></div>
 			<!-- Central sun circle -->
 			<div
-				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-200 md:h-16 md:w-16"
+				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-200"
 			>
 				<!-- Sun rays -->
 				<div class="relative h-32 w-32">
