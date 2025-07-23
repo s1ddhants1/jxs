@@ -2,7 +2,7 @@
 	import { theme } from '$lib/stores/theme.js';
 	import Stars from '$lib/components/Stars.svelte';
 
-	// Nav Item #2 Dark Mode Toggle function
+	// Dark Mode Toggle
 	const toggleTheme = () => {
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
 	};
@@ -27,48 +27,27 @@
 	{/if}
 
 	{#if $theme === 'light'}
-		<!-- Sun -->
 		<button
 			on:click={toggleTheme}
-			class="absolute top-10 right-10 flex h-18 w-18 items-center justify-center rounded-full bg-amber-200 shadow-lg shadow-yellow-300/70"
+			class="absolute top-10 right-10 flex h-18 w-18 items-center justify-center rounded-full bg-amber-200 shadow-xl shadow-yellow-100"
 			aria-label="Toggle light mode"
 		>
+			<!-- Sun glow layer -->
+			<div class="absolute z-0 h-20 w-20 rounded-full bg-amber-200/40 blur-2xl"></div>
 			<!-- Central sun circle -->
-			<div class="relative flex h-14 w-14 items-center justify-center rounded-full bg-amber-100">
+			<div
+				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-200 md:h-16 md:w-16"
+			>
 				<!-- Sun rays -->
-				<div class="absolute inset-0 flex items-center justify-center">
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(0deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(45deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(90deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(135deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(180deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(225deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(270deg) translateY(-32px);"
-					></span>
-					<span
-						class="absolute block h-1 w-6 rounded-full bg-yellow-200"
-						style="transform: rotate(315deg) translateY(-32px);"
-					></span>
+				<div class="relative h-32 w-32">
+					<div class="absolute inset-0 flex items-center justify-center">
+						{#each Array.from({ length: 12 }) as _, i}
+							<span
+								class="absolute block h-1 w-4 rounded-full bg-yellow-200"
+								style="transform: rotate({i * 30}deg) translateY(-39px);"
+							></span>
+						{/each}
+					</div>
 				</div>
 			</div>
 		</button>
