@@ -31,7 +31,7 @@
 		<img
 			src="/kim.webp"
 			alt="Kim"
-			class="absolute left-0 z-10 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-2000 ease-in-out"
+			class="absolute left-0 z-10 mt-10 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
 			class:translate-x-0={sectionVisible}
 			class:-translate-x-full={!sectionVisible}
 		/>
@@ -39,7 +39,7 @@
 		<!-- Center content -->
 		<div class="flex items-center justify-center">
 			<p
-				class="z-0 mt-20 bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text text-[40px] font-bold text-transparent"
+				class="z-0 mt-20 bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text font-[PlayfulBoxes] text-[60px] font-bold text-transparent"
 			>
 				WELCOME
 			</p>
@@ -49,7 +49,7 @@
 		<img
 			src="/olaf.webp"
 			alt="Olaf"
-			class="absolute right-0 z-10 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-2000 ease-in-out"
+			class="absolute right-0 z-10 mt-30 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
 			class:translate-x-0={sectionVisible}
 			class:translate-x-full={!sectionVisible}
 		/>

@@ -75,7 +75,7 @@
 
 		<button
 			on:click={sharePlaylist}
-			class="rounded-md border-2 border-rose-600 bg-transparent px-4 py-2 font-semibold text-white shadow-md transition-colors hover:bg-rose-600 hover:text-white focus:ring-2 focus:ring-rose-500 focus:outline-none disabled:opacity-50"
+			class="rounded-md border-1 border-rose-600 bg-transparent px-4 py-2 font-semibold text-white shadow-md transition-colors hover:bg-rose-600 hover:text-white focus:ring-2 focus:ring-rose-500 focus:outline-none disabled:opacity-50"
 			aria-label="Save playlist to Spotify"
 		>
 			{shareButtonText}

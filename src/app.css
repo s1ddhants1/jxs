@@ -11,7 +11,18 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+@font-face {
+	font-family: 'LondonTwo';
+	src: url('/fonts/LondonTwo.woff2') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PlayfulBoxes';
+	src: url('/fonts/PlayfulBoxes.woff2') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 @font-face {
 	font-family: 'Icekingdom';
 	src: url('/fonts/Icekingdom.woff2') format('woff');
