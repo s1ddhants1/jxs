@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class="bg-gradient-to-br from-pink-50 to-rose-50 transition-colors duration-500 dark:bg-gradient-to-br dark:from-black dark:to-neutral-800"
+	class="bg-gradient-to-br from-pink-100 to-rose-100 transition-colors duration-500 dark:bg-gradient-to-br dark:from-black dark:to-neutral-800"
 >
 	<Navbar />
 	<div class="content-wrapper relative flex h-full min-h-screen flex-col overflow-x-hidden">

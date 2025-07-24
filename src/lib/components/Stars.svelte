@@ -22,6 +22,6 @@
         opacity: {star.opacity};
         animation-delay: {star.delay}s;
       "
-		/>
+		></div>
 	{/each}
 </div>
