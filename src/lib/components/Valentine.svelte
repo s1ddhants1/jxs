@@ -31,20 +31,26 @@
 	<div
 		class="fixed z-20 flex w-full items-center justify-center p-40 font-[LondonBetween] font-bold text-nowrap"
 	>
-		<div class="typing-animation">
-			<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">heyy nini!!</p>
-			<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
-				would you like to...
-			</p>
-			<p
-				class="bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-4xl leading-15 font-bold text-transparent md:text-6xl"
-			>
-				Be My Valentine?
-			</p>
-			<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">...please?</p>
-			<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
-				I love you &lt;3
-			</p>
+		<div
+			class="w-full max-w-md rounded-xl border border-white/20 bg-white/10 p-8 shadow-lg backdrop-blur-md dark:bg-white/5"
+		>
+			<div class="typing-animation">
+				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
+					heyy nini!!
+				</p>
+				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
+					would you like to...
+				</p>
+				<p
+					class="bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-4xl leading-15 font-bold text-transparent md:text-6xl"
+				>
+					Be My Valentine?
+				</p>
+				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">...please?</p>
+				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
+					I love you &lt;3
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
