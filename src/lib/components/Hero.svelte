@@ -69,8 +69,12 @@
 			class="to-pink relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
 		>
 			Forever<br />
-			<span class="inline-block md:mt-2">❤️</span>
 		</h3>
+		<h4
+			class="animate-heartbeat relative font-[LondonTwo] text-6xl text-pink-500 md:mt-2 md:text-7xl"
+		>
+			🩷
+		</h4>
 		<h4
 			class="mt-8 font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
 		>
@@ -103,5 +107,7 @@
 	.animate-heartbeat {
 		animation: heartbeat 1.5s ease-in-out infinite;
 		will-change: transform;
+		backface-visibility: hidden;
+		transform: translateZ(0);
 	}
 </style>
