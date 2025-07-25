@@ -32,7 +32,7 @@
 		class="fixed z-20 flex w-full items-center justify-center p-40 font-[LondonBetween] font-bold text-nowrap"
 	>
 		<div
-			class="max-w-md rounded-xl border border-white/20 bg-white/10 p-8 shadow-lg backdrop-blur-md dark:bg-white/5"
+			class="max-w-md rounded-xl border border-white/20 bg-white/10 p-7 shadow-lg backdrop-blur-md md:p-4 dark:bg-white/5"
 		>
 			<div class="typing-animation">
 				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
