@@ -24,7 +24,7 @@
 </script>
 
 <section
-	class="flex min-h-screen w-full flex-col items-center justify-center rounded-xl bg-gradient-to-br from-amber-200 via-white to-blue-200 p-4 dark:bg-gradient-to-br dark:from-amber-900/50 dark:via-black dark:to-white/30"
+	class="flex min-h-screen w-full flex-col items-center justify-center rounded-xl p-4 dark:bg-gradient-to-br"
 >
 	<div bind:this={sectionRef} class="relative h-screen w-full overflow-hidden">
 		<!-- Kim slides in from left -->
@@ -39,9 +39,9 @@
 		<!-- Center content -->
 		<div class="flex items-center justify-center">
 			<p
-				class="z-0 mt-20 bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text font-[PlayfulBoxes] text-[60px] font-bold text-transparent"
+				class="z-0 mt-20 bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text font-[LondonTwo] text-[60px] font-bold text-transparent"
 			>
-				WELCOME
+				Welcome
 			</p>
 		</div>
 
@@ -60,17 +60,5 @@
 	section {
 		background-size: 200% 200%;
 		animation: gradient 12s ease infinite;
-	}
-
-	@keyframes gradient {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
 	}
 </style>
