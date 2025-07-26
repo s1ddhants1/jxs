@@ -33,7 +33,7 @@
 
 		<button
 			on:click={toggleTheme}
-			class="absolute top-10 right-10 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-300 shadow-xl shadow-yellow-100 md:h-16 md:w-16"
+			class="absolute top-10 right-10 flex items-center justify-center rounded-full bg-yellow-300 shadow-xl shadow-yellow-100"
 			aria-label="Toggle light mode"
 		>
 			<!-- Sun glow layer -->
@@ -43,12 +43,12 @@
 				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-300"
 			>
 				<!-- Sun rays -->
-				<div class="relative h-24 w-24 md:h-32 md:w-32">
+				<div class="relative h-32 w-32 md:h-32 md:w-32">
 					<div class="absolute inset-0 flex items-center justify-center">
 						{#each Array.from({ length: 12 }) as _, i}
 							<span
 								class="absolute block h-1 w-10 rounded-full bg-yellow-300"
-								style="transform: rotate({i * 30}deg) translateY(-39px)"
+								style="transform: rotate({i * 30}deg) translateY(-29px)"
 							></span>
 						{/each}
 					</div>
