@@ -1,8 +1,8 @@
 <script>
 	let characters = ['💕', '🩷', '💗', '💓', '💘', '💞'];
-	let emojiCount = 45; // Optimal number for performance
+	let emojiCount = 45;
 
-	// Smooth animation state
+	// Animation state
 	let lastTime = $state(0);
 	let confetti = $state(
 		new Array(emojiCount).fill().map((_, i) => {
@@ -31,7 +31,7 @@
 		})
 	);
 
-	// Smooth spring physics
+	//  Spring physics
 	const spring = (current, target, velocity, damping = 0.5, stiffness = 0.2) => {
 		const delta = target - current;
 		const acceleration = stiffness * delta - damping * velocity;
@@ -44,9 +44,9 @@
 	$effect(() => {
 		let frame = requestAnimationFrame(function loop(time) {
 			frame = requestAnimationFrame(loop);
-			const deltaTime = Math.min(50, time - lastTime); // Cap at 50ms
+			const deltaTime = Math.min(50, time - lastTime);
 			lastTime = time;
-			const cycleDuration = 40000; // Longer cycle for slower changes
+			const cycleDuration = 40000;
 
 			for (const confetto of confetti) {
 				// Update lifecycle
