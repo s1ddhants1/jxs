@@ -42,7 +42,7 @@
 					would you like to...
 				</p>
 				<p
-					class="bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-4xl leading-15 font-bold text-transparent md:text-6xl"
+					class="bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-4xl leading-15 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
 				>
 					Be My Valentine?
 				</p>
@@ -52,6 +52,15 @@
 				</p>
 			</div>
 		</div>
+		<svg class="glow-heart absolute z-[-10] flex" width="195" height="135" viewBox="0 0 65 45">
+			<path
+				d="M32.5,41 Q2.5,21 14,10 A13,13,0,0,1,32.5,15 A13,13,0,0,1,51,10 Q62.5,21 32.5,41 Z"
+				fill="#ec4899"
+				stroke="white"
+				stroke-width="2"
+				filter="drop-shadow(0 0 48px #fad1d7)"
+			/>
+		</svg>
 	</div>
 </section>
 
@@ -68,5 +77,8 @@
 		transition:
 			width 2s ease,
 			opacity 1s ease;
+	}
+	.glow-heart {
+		filter: drop-shadow(0 0 32px pink) drop-shadow(0 0 8px gold);
 	}
 </style>
