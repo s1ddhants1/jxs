@@ -12,7 +12,10 @@
 		'We have music, cute plushies, and lots of love.',
 		'The stars twinkle and change on every refresh.',
 		'and a little bit of magic.',
-		'and ever and ever.'
+		'and ever and ever.',
+		'so happy together 🎶',
+		'cat 😺',
+		'Pineapples > Mangoes'
 	];
 	function getRandomLine() {
 		const randomIndex = Math.floor(Math.random() * Lines.length);
