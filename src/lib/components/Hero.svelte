@@ -6,6 +6,19 @@
 	const toggleTheme = () => {
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
 	};
+
+	const Lines = [
+		'A little place on the internet to celebrate us!',
+		'We have music, cute plushies, and lots of love.',
+		'The stars twinkle and change on every refresh.',
+		'and a little bit of magic.',
+		'and ever and ever.'
+	];
+	function getRandomLine() {
+		const randomIndex = Math.floor(Math.random() * Lines.length);
+		return Lines[randomIndex];
+	}
+	let currentLine = getRandomLine();
 </script>
 
 <section class="relative min-h-screen w-full overflow-hidden">
@@ -78,7 +91,7 @@
 		<h4
 			class="mt-8 font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
 		>
-			A little place on the internet to celebrate us!
+			{currentLine}
 		</h4>
 	</div>
 </section>
