@@ -71,7 +71,7 @@
 </div>
 
 <svg viewBox="0 0 1080 1080" class="pointer-events-none absolute inset-0 h-full w-full">
-	<g transform="translate(-600, 250)">
+	<g transform="translate(-400, 250)">
 		<polyline
 			points={ariesConstellation.polyline.map(([x, y]) => `${x},${y}`).join(' ')}
 			stroke="white"
