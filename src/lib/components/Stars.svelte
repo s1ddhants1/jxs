@@ -25,7 +25,7 @@
 		]
 	};
 
-	const constellation = {
+	const capricornusconstellation = {
 		name: 'Capricornus',
 		stars: [
 			{ x: 812.5, y: 372.2, r: 4.3 },
@@ -71,17 +71,15 @@
 </div>
 
 <svg viewBox="0 0 1080 1080" class="pointer-events-none absolute inset-0 h-full w-full">
-	<!-- Draw the constellation line -->
 	<polyline
 		points={ariesConstellation.polyline.map(([x, y]) => `${x},${y}`).join(' ')}
 		stroke="white"
-		stroke-width="1.5"
+		stroke-width="0"
 		fill="none"
-		class="animate-pulse"
+		class=""
 		style="filter: drop-shadow(0 0 6px #fff5);"
 	/>
 
-	<!-- Draw twinkling stars at each node -->
 	{#each ariesConstellation.stars as star (star.x + ',' + star.y)}
 		<circle
 			cx={star.x}
@@ -95,18 +93,16 @@
 </svg>
 
 <svg viewBox="0 0 1080 1080" class="pointer-events-none absolute inset-0 h-full w-full">
-	<!-- Draw the constellation polygon line -->
 	<polygon
-		points={constellation.polygon.map(([x, y]) => `${x},${y}`).join(' ')}
+		points={capricornusconstellation.polygon.map(([x, y]) => `${x},${y}`).join(' ')}
 		stroke="white"
-		stroke-width="1.5"
+		stroke-width="0"
 		fill="none"
-		class="animate-pulse"
+		class=""
 		style="filter: drop-shadow(0 0 6px #fff5);"
 	/>
 
-	<!-- Draw twinkling stars at each node -->
-	{#each constellation.stars as star (star.x + '-' + star.y)}
+	{#each capricornusconstellation.stars as star (star.x + '-' + star.y)}
 		<circle
 			cx={star.x}
 			cy={star.y}
