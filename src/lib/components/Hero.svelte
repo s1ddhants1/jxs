@@ -9,13 +9,14 @@
 
 	const Lines = [
 		'A little place on the internet to celebrate us!',
-		'We have music, cute plushies, and lots of love.',
-		'The stars twinkle and change on every refresh.',
-		'and a little bit of magic.',
-		'and ever and ever.',
+		'We have music, cute plushies, and lots of love',
+		'The stars twinkle and change on every refresh',
+		'and a little bit of magic',
+		'and ever and ever and ever',
 		'so happy together 🎶',
 		'cat 😺',
-		'Pineapples > Mangoes'
+		'Pineapples > Mangoes',
+		'insert quirky loading screen tip'
 	];
 	function getRandomLine() {
 		const randomIndex = Math.floor(Math.random() * Lines.length);

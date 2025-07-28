@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { theme } from '../lib/stores/theme.js';
-	import showNavbar from '$lib/components/Navbar.svelte';
 
 	// Initialize theme
 	$: if (typeof document !== 'undefined') {
