@@ -25,7 +25,7 @@
 		]
 	};
 
-	const capricornusconstellation = {
+	const capricornusConstellation = {
 		name: 'Capricornus',
 		stars: [
 			{ x: 812.5, y: 372.2, r: 4.3 },
@@ -71,45 +71,49 @@
 </div>
 
 <svg viewBox="0 0 1080 1080" class="pointer-events-none absolute inset-0 h-full w-full">
-	<polyline
-		points={ariesConstellation.polyline.map(([x, y]) => `${x},${y}`).join(' ')}
-		stroke="white"
-		stroke-width="0"
-		fill="none"
-		class=""
-		style="filter: drop-shadow(0 0 6px #fff5);"
-	/>
-
-	{#each ariesConstellation.stars as star (star.x + ',' + star.y)}
-		<circle
-			cx={star.x}
-			cy={star.y}
-			r={star.r}
-			fill="white"
-			class="animate-pulse"
-			style="opacity: 0.85; animation-delay: {Math.random() * 3}s;"
+	<g transform="translate(-600, 250)">
+		<polyline
+			points={ariesConstellation.polyline.map(([x, y]) => `${x},${y}`).join(' ')}
+			stroke="white"
+			stroke-width="0.1"
+			fill="none"
+			class=""
+			style="filter: drop-shadow(0 0 6px #fff5);"
 		/>
-	{/each}
-</svg>
+
+		{#each ariesConstellation.stars as star (star.x + ',' + star.y)}
+			<circle
+				cx={star.x}
+				cy={star.y}
+				r={star.r}
+				fill="white"
+				class="animate-pulse"
+				style="opacity: 0.85; animation-delay: {Math.random() * 3}s;"
+			/>
+		{/each}
+	</g></svg
+>
 
 <svg viewBox="0 0 1080 1080" class="pointer-events-none absolute inset-0 h-full w-full">
-	<polygon
-		points={capricornusconstellation.polygon.map(([x, y]) => `${x},${y}`).join(' ')}
-		stroke="white"
-		stroke-width="0"
-		fill="none"
-		class=""
-		style="filter: drop-shadow(0 0 6px #fff5);"
-	/>
-
-	{#each capricornusconstellation.stars as star (star.x + '-' + star.y)}
-		<circle
-			cx={star.x}
-			cy={star.y}
-			r={star.r}
-			fill="white"
-			class="animate-pulse"
-			style="opacity: 0.85; animation-delay: {Math.random() * 3}s;"
+	<g transform="translate(200, 100)">
+		<polygon
+			points={capricornusConstellation.polygon.map(([x, y]) => `${x},${y}`).join(' ')}
+			stroke="white"
+			stroke-width="0.1"
+			fill="none"
+			class=""
+			style="filter: drop-shadow(0 0 6px #fff5);"
 		/>
-	{/each}
-</svg>
+
+		{#each capricornusConstellation.stars as star (star.x + '-' + star.y)}
+			<circle
+				cx={star.x}
+				cy={star.y}
+				r={star.r}
+				fill="white"
+				class="animate-pulse"
+				style="opacity: 0.85; animation-delay: {Math.random() * 3}s;"
+			/>
+		{/each}
+	</g></svg
+>
