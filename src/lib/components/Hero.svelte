@@ -7,16 +7,21 @@
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
 	};
 
+	let startDate = new Date('2025-06-30');
+	let daysPassed = Math.floor((new Date().getTime() - startDate.getTime()) / (1000 * 3600 * 24));
 	const Lines = [
 		'A little place on the internet to celebrate us!',
 		'We have music, cute plushies, and lots of love',
-		'The stars twinkle and change on every refresh',
+		'The stars twinkle and change on every refresh (most of them)',
 		'and a little bit of magic',
 		'and ever and ever and ever',
 		'so happy together 🎶',
-		'cat 😺',
+		'cat->🐶',
 		'Pineapples > Mangoes',
-		'insert quirky loading screen tip'
+		'insert quirky loading screen tip',
+		'vs monkey was ' + daysPassed + ' days ago',
+		'Counting stars, counting days, counting love',
+		'This site is powered by hugs and smiles'
 	];
 	function getRandomLine() {
 		const randomIndex = Math.floor(Math.random() * Lines.length);
