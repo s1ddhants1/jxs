@@ -63,7 +63,7 @@
 
 	.light {
 		background:
-			url('/imgs/grain.webp'),
+			url('/grain.webp'),
 			radial-gradient(
 				50% 50% at 50% 50%,
 				rgba(198, 102, 12, 0.742) 0%,

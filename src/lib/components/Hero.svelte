@@ -93,12 +93,12 @@
 			Forever<br />
 		</h3>
 		<h4
-			class="animate-heartbeat relative font-[LondonTwo] text-6xl text-pink-500 md:mt-2 md:text-7xl"
+			class="relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl md:mt-2 md:text-7xl"
 		>
 			🩷
 		</h4>
 		<h4
-			class="mt-8 font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
+			class="mt-8 bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
 		>
 			{currentLine}
 		</h4>
