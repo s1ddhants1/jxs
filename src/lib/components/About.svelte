@@ -25,32 +25,57 @@
 
 <section class="flex min-h-screen w-full flex-col items-center justify-center rounded-xl p-4">
 	<div bind:this={sectionRef} class="relative h-screen w-full overflow-hidden">
-		<!-- Kim slides in from left -->
-		<img
-			src="/imgs/kim.webp"
-			alt="Kim"
-			class="absolute left-0 z-10 mt-10 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
-			class:translate-x-0={sectionVisible}
-			class:-translate-x-full={!sectionVisible}
-		/>
-
-		<!-- Center content -->
-		<div class="flex items-center justify-center">
+		<g>
+			<!-- Kim slides in from left -->
+			<img
+				src="/imgs/kim.webp"
+				alt="Kim"
+				class="absolute left-0 z-10 mt-40 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
+				class:translate-x-0={sectionVisible}
+				class:-translate-x-full={!sectionVisible}
+			/>
 			<p
-				class="z-0 mt-20 bg-gradient-to-b from-amber-400 via-amber-700 to-amber-950 bg-clip-text font-[LondonTwo] text-[60px] font-bold text-transparent"
+				class="relative z-20 hidden w-full max-w-2xl text-center text-lg text-amber-700 dark:text-amber-600"
 			>
-				Welcome
+				<span class=" text-3xl font-semibold underline underline-offset-2">Mr. Kim </span>
+				<br />
+				<span class="font- text-lg">
+					the most feared of them all, yet most respected, truly an enigma, the real gangster</span
+				>
 			</p>
-		</div>
+			<g />
+			<!-- Center content -->
+			<div class="relative z-20 flex flex-col items-center justify-center">
+				<p
+					class="z-0 mt-20 bg-gradient-to-b from-amber-400 via-amber-700 to-amber-600 bg-clip-text text-[50px] font-extrabold text-transparent"
+				>
+					<span class="text-6xl">Meet</span> <br />the gang
+				</p>
+				<p class="text-5l bg-gradient-to-b text-amber-600">beware: they take cuddles seriously</p>
+			</div>
 
-		<!-- Olaf slides in from right -->
-		<img
-			src="/imgs/olaf.webp"
-			alt="Olaf"
-			class="absolute right-0 z-10 mt-30 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
-			class:translate-x-0={sectionVisible}
-			class:translate-x-full={!sectionVisible}
-		/>
+			<g>
+				<!-- Olaf slides in from right -->
+				<img
+					src="/imgs/olaf.webp"
+					alt="Olaf"
+					class="absolute right-0 z-10 mt-30 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
+					class:translate-x-0={sectionVisible}
+					class:translate-x-full={!sectionVisible}
+				/>
+				<p
+					class=" absolute bottom-10 left-1/2 z-20 hidden w-full max-w-2xl text-center text-lg text-gray-700 dark:text-gray-300"
+				>
+					<span class="font-[IceKingdom] text-3xl font-semibold underline underline-offset-2"
+						>Olaf
+					</span>
+					<br />
+					<span class="font- text-lg">
+						he likes carrots, cuddles, and long walks on the beach
+					</span>
+				</p>
+			</g>
+		</g>
 	</div>
 	<div class="light absolute min-h-screen w-full items-center justify-center rounded-xl p-4"></div>
 </section>
