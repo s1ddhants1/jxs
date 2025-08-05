@@ -3,6 +3,7 @@
 	import About from '$lib/components/About.svelte';
 	import Playlist from '$lib/components/Playlist.svelte';
 	import Test from '$lib/components/Test.svelte';
+	//import ToastNotifications, { showToast } from '$lib/components/toast.svelte';
 </script>
 
 <div class="overflow-hidden">
