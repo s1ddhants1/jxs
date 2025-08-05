@@ -40,7 +40,8 @@
 				<span class=" text-3xl font-semibold underline underline-offset-2">Mr. Kim </span>
 				<br />
 				<span class="font- text-lg">
-					the most feared of them all, yet most respected, truly an enigma, the real gangster</span
+					the most feared of them all, yet most respected, truly an enigma, the real gangster
+					funshine bear</span
 				>
 			</p>
 			<g />

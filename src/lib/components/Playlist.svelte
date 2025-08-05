@@ -43,7 +43,7 @@
 	class="flex min-h-screen w-full flex-col items-center justify-center rounded-xl bg-gradient-to-br from-rose-900 via-rose-100 to-rose-900 p-4 dark:bg-gradient-to-br dark:from-rose-900 dark:via-black dark:to-rose-900"
 >
 	<p
-		class="z-0 bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-[50px] font-extrabold text-transparent"
+		class="z-0 bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-5xl font-extrabold text-transparent"
 	>
 		PLAYLIST
 	</p>

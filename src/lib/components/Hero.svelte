@@ -49,7 +49,7 @@
 
 	{#if $theme === 'light'}
 		<!-- Blue Sky-->
-		<div class="absolute top-0 left-0 z-[-10] h-2/5 w-full overflow-hidden bg-cyan-300/40 blur-xl">
+		<div class="absolute top-0 left-0 h-2/5 w-full overflow-hidden bg-cyan-300/40 blur-xl">
 			<Stars />
 		</div>
 
