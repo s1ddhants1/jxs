@@ -1,8 +1,7 @@
 <script>
 	let characters = ['💕', '🩷', '💗', '💓', '💘', '💞', '🌸'];
-	let emojiCount = 45; // Optimal number for performance
+	let emojiCount = 45;
 
-	// Smooth animation state
 	let lastTime = $state(0);
 	let confetti = $state(
 		new Array(emojiCount).fill().map((_, i) => {
@@ -31,7 +30,6 @@
 		})
 	);
 
-	// Smooth spring physics
 	const spring = (current, target, velocity, damping = 0.5, stiffness = 0.2) => {
 		const delta = target - current;
 		const acceleration = stiffness * delta - damping * velocity;
@@ -44,15 +42,12 @@
 	$effect(() => {
 		let frame = requestAnimationFrame(function loop(time) {
 			frame = requestAnimationFrame(loop);
-			const deltaTime = Math.min(50, time - lastTime); // Cap at 50ms
+			const deltaTime = Math.min(50, time - lastTime);
 			lastTime = time;
-			const cycleDuration = 40000; // Longer cycle for slower changes
-
+			const cycleDuration = 40000;
 			for (const confetto of confetti) {
-				// Update lifecycle
 				confetto.lifeProgress = (confetto.lifeProgress + deltaTime / cycleDuration) % 1;
 
-				// State transitions
 				if (confetto.state === 'fading-in') {
 					confetto.spring.opacity = spring(
 						confetto.spring.opacity.value,
@@ -73,7 +68,6 @@
 						0.3
 					);
 					if (confetto.spring.opacity.value < 0.01) {
-						// Recycle with new properties
 						confetto.x = Math.random() * 80 + 10;
 						confetto.y = Math.random() * 80 + 10;
 						confetto.speedX = (-0.03 + Math.random() * 0.06) * (0.5 + confetto.size / 2);
@@ -84,7 +78,6 @@
 					}
 				}
 
-				// Update active emojis with smooth physics
 				if (confetto.state !== 'fading-out') {
 					confetto.targetX = confetto.x + confetto.speedX * deltaTime;
 					confetto.targetY = confetto.y + confetto.speedY * deltaTime;
@@ -110,7 +103,6 @@
 					confetto.rotation += confetto.rotationSpeed * (deltaTime / 16);
 				}
 
-				// Calculate edge fading with smooth curve
 				const edgeMargin = 0;
 				const distFromEdgeX = Math.min(confetto.x, 100 - confetto.x);
 				const distFromEdgeY = Math.min(confetto.y, 100 - confetto.y);
@@ -163,7 +155,7 @@
 		filter: drop-shadow(0 1px 2px rgba(255, 105, 180, 0.1))
 			drop-shadow(0 2px 4px rgba(255, 105, 180, 0.05));
 		transform-origin: center;
-		transition: none; /* We handle all animation in JS */
+		transition: none;
 	}
 
 	.fade-in {

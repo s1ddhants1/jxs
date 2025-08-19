@@ -30,7 +30,8 @@
 			<img
 				src="/imgs/kim.webp"
 				alt="Kim"
-				class="absolute left-0 z-10 mt-40 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
+				class="absolute left-0 z-10 mt-60 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms]
+         ease-in-out sm:w-[45vw] sm:max-w-[400px] md:bottom-0 md:w-[35vw] md:max-w-[350px]"
 				class:translate-x-0={sectionVisible}
 				class:-translate-x-full={!sectionVisible}
 			/>
@@ -60,7 +61,8 @@
 				<img
 					src="/imgs/olaf.webp"
 					alt="Olaf"
-					class="absolute right-0 z-10 mt-30 h-[70vh] max-h-[500px] scale-50 object-contain transition-all duration-[2000ms] ease-in-out md:mt-20 md:max-h-[1000px]"
+					class="absolute right-0 bottom-0 z-10 w-[60vw] max-w-[280px] object-contain transition-all
+         duration-[2000ms] ease-in-out sm:w-[45vw] sm:max-w-[400px] md:w-[35vw] md:max-w-[300px]"
 					class:translate-x-0={sectionVisible}
 					class:translate-x-full={!sectionVisible}
 				/>
