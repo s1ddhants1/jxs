@@ -41,8 +41,8 @@
 				<span class=" text-3xl font-semibold underline underline-offset-2">Mr. Kim </span>
 				<br />
 				<span class="font- text-lg">
-					the most feared of them all, yet most respected, truly an enigma, the real gangster
-					funshine bear</span
+					the most feared of them all, yet most respected, truly an enigma,the real og- funshine
+					bear</span
 				>
 			</p>
 			<g />
@@ -53,7 +53,9 @@
 				>
 					<span class="text-6xl">Meet</span> <br />the gang
 				</p>
-				<p class="text-5l bg-gradient-to-b text-amber-600">beware: they take cuddles seriously</p>
+				<p class="text-5l mt-2 bg-gradient-to-b text-amber-600">
+					beware: they take cuddles seriously
+				</p>
 			</div>
 
 			<g>
