@@ -3,7 +3,7 @@
 
 **A website made for nini** <br />
 
-_built in sveltekit, hosted on cloudflare pages _
+*built in sveltekit, hosted on cloudflare pages*
 
 </div>
 
