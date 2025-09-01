@@ -1,5 +1,12 @@
-# JxS in Svelte
+<div align="center">
+# JxS
 
-WIP: Porting the static website to svelte with tailwind css
+**A website made for nini** <br />
 
-[jxs.pages.dev](https://jxs.pages.dev)
+_built in sveltekit, hosted on cloudflare pages _
+
+</div>
+
+---
+
+[Visit](https://jxs.pages.dev)
