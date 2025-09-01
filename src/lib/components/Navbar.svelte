@@ -23,7 +23,6 @@
 		showNavbar = !showNavbar;
 	}
 
-	// Nav Item #1 Audio Toggle function
 	let audioElement: HTMLAudioElement;
 	let isPlaying = false;
 	const audioSource = '/music.mp3';
@@ -57,12 +56,10 @@
 		}
 	}
 
-	// Nav Item #2 Dark Mode Toggle function
 	const toggleTheme = () => {
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
 	};
 
-	// Nav Item #3 Menu Toggle function
 	let isMenuOpen = writable(false);
 	let menuButton: HTMLButtonElement;
 	let menuElement: HTMLDivElement;
@@ -108,17 +105,13 @@
 					on:click={toggleAudio}
 					class="rounded-md p-2 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700"
 				>
-					{#if !isPlaying}
-						<FontAwesomeIcon
-							icon={faPlay}
-							class="text-xl text-neutral-900 md:text-2xl dark:text-neutral-100"
-						/>
-					{:else}
-						<FontAwesomeIcon
-							icon={faPause}
-							class="text-xl text-neutral-900 md:text-2xl dark:text-neutral-100"
-						/>
-					{/if}
+					<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
+						{#if !isPlaying}
+							<FontAwesomeIcon icon={faPlay} class="text-neutral-900 dark:text-neutral-100" />
+						{:else}
+							<FontAwesomeIcon icon={faPause} class="text-neutral-900 dark:text-neutral-100" />
+						{/if}
+					</div>
 				</button>
 			{/if}
 
@@ -126,17 +119,13 @@
 				on:click={toggleTheme}
 				class="rounded-md p-2 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700"
 			>
-				{#if $theme === 'light'}
-					<FontAwesomeIcon
-						icon={faMoon}
-						class="text-xl text-neutral-900 md:text-2xl dark:text-neutral-100"
-					/>
-				{:else}
-					<FontAwesomeIcon
-						icon={faSun}
-						class="text-xl text-neutral-900 md:text-2xl dark:text-neutral-100"
-					/>
-				{/if}
+				<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
+					{#if $theme === 'light'}
+						<FontAwesomeIcon icon={faMoon} class="text-neutral-900 dark:text-neutral-100" />
+					{:else}
+						<FontAwesomeIcon icon={faSun} class="text-neutral-900 dark:text-neutral-100" />
+					{/if}
+				</div>
 			</button>
 
 			<div class="relative">
@@ -147,17 +136,13 @@
 					bind:this={menuButton}
 					class="rounded-md p-2 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700"
 				>
-					{#if $isMenuOpen === false}
-						<FontAwesomeIcon
-							icon={faBars}
-							class="text-2xl text-neutral-900 md:text-3xl dark:text-neutral-100"
-						/>
-					{:else}
-						<FontAwesomeIcon
-							icon={faClose}
-							class="text-2xl text-neutral-900 md:text-3xl dark:text-neutral-100"
-						/>
-					{/if}
+					<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
+						{#if !$isMenuOpen}
+							<FontAwesomeIcon icon={faBars} class="text-neutral-900 dark:text-neutral-100" />
+						{:else}
+							<FontAwesomeIcon icon={faClose} class="text-neutral-900 dark:text-neutral-100" />
+						{/if}
+					</div>
 				</button>
 			</div>
 		</nav>
@@ -176,8 +161,7 @@
 				role="menuitem"
 				class="mt-20 font-bold hover:text-pink-600 dark:hover:text-pink-400"
 			>
-				<span class="h-2 w-2 rounded-full"></span>
-				<span>Home</span>
+				Home
 			</a>
 
 			<a
@@ -186,8 +170,7 @@
 				role="menuitem"
 				class="mt-4 font-bold hover:text-pink-600 dark:hover:text-pink-400"
 			>
-				<span class="h-2 w-2 rounded-full"></span>
-				<span>Valentine's</span>
+				Valentine's
 			</a>
 
 			<button
@@ -196,10 +179,9 @@
 				role="menuitem"
 				class="mt-6 font-bold hover:text-pink-600 dark:hover:text-pink-400"
 			>
-				<FontAwesomeIcon
-					icon={faEyeSlash}
-					class="text-xl text-neutral-900 md:text-2xl dark:text-neutral-100"
-				></FontAwesomeIcon>
+				<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
+					<FontAwesomeIcon icon={faEyeSlash} class="text-neutral-900 dark:text-neutral-100" />
+				</div>
 			</button>
 		</div>
 	{/if}
