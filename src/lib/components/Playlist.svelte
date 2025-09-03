@@ -39,7 +39,7 @@
 
 <section class="flex min-h-screen w-full flex-col items-center justify-center rounded-xl">
 	<p
-		class="mt-20 bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-6xl font-extrabold tracking-wide text-transparent"
+		class="mt-40 bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-6xl font-extrabold tracking-wide text-transparent"
 	>
 		PLAYLIST
 	</p>
@@ -77,8 +77,8 @@
 			{shareButtonText}
 		</button>
 	</div>
-	<div class="flex flex-col items-center justify-center">
-		<img src="/imgs/glassy-mountains.png" alt="" class="" />
+	<div class="flex flex-col">
+		<img src="/imgs/glassy-mountains.webp" alt="" class="" />
 	</div>
 </section>
 
