@@ -29,8 +29,8 @@
 		<img
 			src="/imgs/kim.webp"
 			alt="Kim"
-			class="absolute left-0 z-10 mt-60 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms]
-         ease-in-out sm:w-[45vw] sm:max-w-[400px] md:bottom-0 md:w-[35vw] md:max-w-[350px]"
+			class="absolute top-0 left-0 z-10 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms] ease-in-out
+         sm:w-[45vw] sm:max-w-[400px] md:bottom-0 md:mt-60 md:w-[35vw] md:max-w-[350px]"
 			class:translate-x-0={sectionVisible}
 			class:-translate-x-full={!sectionVisible}
 		/>
@@ -46,7 +46,7 @@
 
 		<!-- Center content -->
 		<div
-			class="absolute top-1/2 left-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center opacity-0 transition-all delay-[1200ms] duration-1000 ease-out"
+			class="text-shadow-xl absolute top-1/2 left-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center opacity-0 transition-all delay-[1200ms] duration-1000 ease-out"
 			class:opacity-100={sectionVisible}
 			class:scale-100={sectionVisible}
 			class:scale-90={!sectionVisible}

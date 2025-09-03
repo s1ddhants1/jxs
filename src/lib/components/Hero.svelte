@@ -2,7 +2,6 @@
 	import { theme } from '$lib/stores/theme.js';
 	import Stars from '$lib/components/Stars.svelte';
 
-	// Dark Mode Toggle
 	const toggleTheme = () => {
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
 	};
@@ -10,18 +9,17 @@
 	let startDate = new Date('2025-06-30');
 	let daysPassed = Math.floor((new Date().getTime() - startDate.getTime()) / (1000 * 3600 * 24));
 	const Lines = [
-		'A little place on the internet to celebrate us!',
-		'We have music, cute plushies, and lots of love',
-		'The stars twinkle and change on every refresh (most of them)',
+		'a little place on the internet to celebrate us!',
+		'we have music, cute plushies, and lots of love',
 		'and a little bit of magic',
 		'and ever and ever and ever',
 		'so happy together 🎶',
 		'cat->🐶',
-		'Pineapples > Mangoes',
+		'pineapples > mangoes',
 		'insert quirky loading screen tip',
 		'vs monkey was ' + daysPassed + ' days ago',
-		'Counting stars, counting days, counting love',
-		'This site is powered by hugs and smiles'
+		'counting stars, counting days, counting love',
+		'this site is powered by hugs and smiles'
 	];
 	function getRandomLine() {
 		const randomIndex = Math.floor(Math.random() * Lines.length);
@@ -79,24 +77,24 @@
 		</button>
 	{/if}
 
-	<div class="intro pt-[22vh] text-center md:pt-60">
-		<h2
+	<div class="pt-[22vh] text-center md:pt-60">
+		<h1
 			class="z-20 font-[LondonTwo] text-4xl text-gray-800 text-shadow-md md:text-6xl dark:text-gray-300"
 		>
 			<span class="block md:inline">Jenny</span>
 			<span class="block md:inline">x</span>
 			<span class="block md:inline">Siddhant</span>
-		</h2>
-		<h3
+		</h1>
+		<h2
 			class="to-pink relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
 		>
 			Forever<br />
-		</h3>
-		<h4
+		</h2>
+		<h3
 			class="animate-heartbeat relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl md:mt-2 md:text-7xl"
 		>
-			🩷
-		</h4>
+			<img src="/imgs/heart.png" alt="" class="inline h-18 w-18 md:h-25 md:w-25" />
+		</h3>
 		<h4
 			class="mt-8 bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
 		>
