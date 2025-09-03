@@ -6,8 +6,10 @@
 
 *built in sveltekit, hosted on cloudflare pages*
 
-</div>
+
 
 ---
 
 [Visit](https://jxs.pages.dev)
+
+</div>
