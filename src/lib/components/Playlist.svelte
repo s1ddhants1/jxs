@@ -77,7 +77,7 @@
 			{shareButtonText}
 		</button>
 	</div>
-	<div class="flex flex-col">
+	<div class="flex w-full min-w-[600px] flex-col object-cover">
 		<img src="/imgs/glassy-mountains.webp" alt="" class="" />
 	</div>
 </section>
