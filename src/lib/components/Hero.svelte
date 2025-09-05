@@ -93,7 +93,7 @@
 		<h3
 			class="animate-heartbeat relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl md:mt-2 md:text-7xl"
 		>
-			<img src="/imgs/heart.png" alt="" class="inline h-18 w-18 md:h-25 md:w-25" />
+			<img src="/imgs/heart.webp" alt="" class="inline h-18 w-18 md:h-25 md:w-25" />
 		</h3>
 		<h4
 			class="mt-8 bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
