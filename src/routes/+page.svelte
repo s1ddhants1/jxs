@@ -1,6 +1,6 @@
 <script>
 	import Hero from '$lib/components/Hero.svelte';
-	import About from '$lib/components/About.svelte';
+	import Plushies from '$lib/components/Plushies.svelte';
 	import Playlist from '$lib/components/Playlist.svelte';
 	import Gallery from '$lib/components/Gallery.svelte';
 	import Test from '$lib/components/Test.svelte';
@@ -9,7 +9,7 @@
 <div class="overflow-hidden">
 	<div class="flex flex-grow flex-col">
 		<Hero />
-		<About />
+		<Plushies />
 		<Gallery />
 		<Playlist />
 		<Test />

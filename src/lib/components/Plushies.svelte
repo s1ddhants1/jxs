@@ -23,13 +23,13 @@
 	});
 </script>
 
-<section class="flex min-h-screen w-full flex-row items-center justify-center rounded-xl p-4">
-	<div bind:this={sectionRef} class="relative h-full w-full">
+<section class="flex min-h-screen w-full items-center justify-center rounded-xl p-4">
+	<div bind:this={sectionRef} class="flex flex-col md:flex-row">
 		<!-- Kim slides in from left -->
 		<img
 			src="/imgs/kim.webp"
 			alt="Kim"
-			class="relative left-0 z-10 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms] ease-in-out"
+			class="relative z-10 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms] ease-in-out"
 			class:translate-x-0={sectionVisible}
 			class:-translate-x-full={!sectionVisible}
 		/>
@@ -45,7 +45,7 @@
 
 		<!-- Center content -->
 		<div
-			class="relative z-20 flex flex-col items-center text-center opacity-0 transition-all delay-[1200ms] duration-1000 ease-out"
+			class="relative z-20 items-center justify-between text-center opacity-0 transition-all delay-[1200ms] duration-1000 ease-out"
 			class:opacity-100={sectionVisible}
 			class:scale-100={sectionVisible}
 			class:scale-90={!sectionVisible}
@@ -53,20 +53,15 @@
 			<p
 				class="bg-gradient-to-b from-amber-400 via-amber-700 to-amber-600 bg-clip-text text-[50px] font-extrabold text-transparent"
 			>
-				<span class="text-6xl">Meet</span> <br />the gang
+				<span class="text-6xl">Meet</span> <br />the gang <br />
 			</p>
-			<p
-				class="mt-2 text-lg text-amber-600 opacity-0 transition-opacity delay-[1600ms] duration-1000"
-				class:opacity-100={sectionVisible}
-			>
-				beware: they take cuddles seriously
-			</p>
+			<span class="text-lg text-amber-600">beware: they take cuddles seriously</span>
 		</div>
 		<!-- Olaf slides in from right -->
 		<img
 			src="/imgs/olaf.webp"
 			alt="Olaf"
-			class="relative right-0 z-10 w-[60vw] max-w-[280px] object-contain transition-all
+			class="relative z-10 w-[60vw] max-w-[250px] object-contain transition-all
          duration-[2000ms] ease-in-out"
 			class:translate-x-0={sectionVisible}
 			class:translate-x-full={!sectionVisible}
@@ -74,9 +69,7 @@
 		<p
 			class="relative bottom-10 left-1/2 z-20 hidden w-full max-w-2xl text-center text-lg text-gray-700 dark:text-gray-300"
 		>
-			<span class="font-[IceKingdom] text-3xl font-semibold underline underline-offset-2"
-				>Olaf
-			</span>
+			<span class="text-3xl font-semibold underline underline-offset-2">Olaf </span>
 			<br />
 			<span class="font- text-lg"> he likes carrots, cuddles, and long walks on the beach </span>
 		</p>
