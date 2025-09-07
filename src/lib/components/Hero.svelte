@@ -86,7 +86,7 @@
 			<span class="block md:inline">Siddhant</span>
 		</h1>
 		<h2
-			class="to-pink relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
+			class="to-pink animate-gradient relative bg-gradient-to-r from-pink-600 via-pink-400 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
 		>
 			Forever<br />
 		</h2>
@@ -129,5 +129,17 @@
 		will-change: transform;
 		backface-visibility: hidden;
 		transform: translateZ(0);
+	}
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
+	.animate-gradient {
+		background-size: 200% auto;
+		animation: gradient 3s linear infinite;
 	}
 </style>
