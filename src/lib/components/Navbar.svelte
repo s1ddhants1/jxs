@@ -99,7 +99,7 @@
 	>
 		<a href="/" class="pl-3 font-[LondonBetween] text-xl font-bold md:p-6 md:text-3xl">JxS</a>
 
-		<nav class="relative flex items-center space-x-4 md:space-x-2">
+		<nav class="relative flex items-center space-x-4 md:space-x-3">
 			{#if $page.url.pathname === '/valentine'}
 				<button
 					on:click={toggleAudio}
