@@ -62,9 +62,7 @@
 			<!-- Sun glow layer -->
 			<div class="absolute z-0 h-20 w-20 rounded-full bg-amber-300/40 blur-2xl"></div>
 			<!-- Central sun circle -->
-			<div
-				class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-300"
-			>
+			<div class="z-10 flex h-12 w-12 items-center justify-center rounded-full bg-amber-300">
 				<!-- Sun rays -->
 				<div class="relative h-32 w-32 md:h-32 md:w-32">
 					<div class="absolute inset-0 flex items-center justify-center">

@@ -51,11 +51,13 @@
 			class:scale-90={!sectionVisible}
 		>
 			<p
-				class="bg-gradient-to-b from-amber-400 via-amber-700 to-amber-600 bg-clip-text text-[50px] font-extrabold text-transparent md:mt-20"
+				class="bg-gradient-to-b from-amber-600 via-amber-600 to-amber-800 bg-clip-text text-[50px] font-extrabold text-transparent md:mt-20 dark:from-amber-400 dark:via-amber-700 dark:to-amber-600"
 			>
 				<span class="text-6xl">Meet</span> <br />the gang <br />
 			</p>
-			<span class="text-lg text-amber-600">beware: they take cuddles seriously</span>
+			<span class="text-lg text-amber-800 dark:text-amber-500"
+				>beware: they take cuddles seriously</span
+			>
 		</div>
 		<!-- Olaf slides in from right -->
 		<img
