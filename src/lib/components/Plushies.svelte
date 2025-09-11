@@ -30,7 +30,7 @@
 			src="/imgs/kim.webp"
 			alt="Kim"
 			class="relative z-10 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms] ease-in-out"
-			class:translate-x-0={sectionVisible}
+			class:-translate-x-10={sectionVisible}
 			class:-translate-x-full={!sectionVisible}
 		/>
 		<p
@@ -51,7 +51,7 @@
 			class:scale-90={!sectionVisible}
 		>
 			<p
-				class="bg-gradient-to-b from-amber-400 via-amber-700 to-amber-600 bg-clip-text text-[50px] font-extrabold text-transparent"
+				class="bg-gradient-to-b from-amber-400 via-amber-700 to-amber-600 bg-clip-text text-[50px] font-extrabold text-transparent md:mt-20"
 			>
 				<span class="text-6xl">Meet</span> <br />the gang <br />
 			</p>
@@ -63,7 +63,7 @@
 			alt="Olaf"
 			class="relative z-10 w-[60vw] max-w-[250px] object-contain transition-all
          duration-[2000ms] ease-in-out"
-			class:translate-x-0={sectionVisible}
+			class:translate-x-10={sectionVisible}
 			class:translate-x-full={!sectionVisible}
 		/>
 		<p

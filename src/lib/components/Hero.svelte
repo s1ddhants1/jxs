@@ -82,14 +82,14 @@
 
 	<div class="pt-[22vh] text-center md:pt-60">
 		<h1
-			class="z-20 font-[LondonTwo] text-4xl text-gray-800 text-shadow-md md:text-6xl dark:text-gray-300"
+			class="z-20 font-[LondonTwo] text-5xl text-gray-800 text-shadow-md md:text-6xl dark:text-gray-300"
 		>
 			<span class="block md:inline">Jenny</span>
 			<span class="block md:inline">x</span>
 			<span class="block md:inline">Siddhant</span>
 		</h1>
 		<h2
-			class="relative bg-gradient-to-r from-pink-700 via-pink-600 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl dark:from-pink-800 dark:via-pink-500 dark:to-pink-800"
+			class="animate-gradient relative bg-gradient-to-r from-pink-700 via-pink-600 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl dark:from-pink-800 dark:via-pink-500 dark:to-pink-800"
 		>
 			Forever<br />
 		</h2>
@@ -97,7 +97,7 @@
 			class="animate-heartbeat relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl md:mt-2 md:text-7xl"
 		>
 			{#if $theme === 'dark'}
-				<img src="/imgs/heart-dark.webp" alt="" class="inline h-18 w-18 md:h-28 md:w-28" />
+				<img src="/imgs/heart-dark.webp" alt="" class="inline h-22 w-22 md:h-28 md:w-28" />
 			{:else}
 				<img src="/imgs/heart-dark.webp" alt="" class="inline h-18 w-18 md:h-28 md:w-28" />
 			{/if}

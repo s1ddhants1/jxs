@@ -97,7 +97,7 @@
 	<header
 		class="flex w-full items-center justify-between p-2 shadow-md backdrop-blur-md transition-colors duration-300 dark:text-white"
 	>
-		<a href="/" class="pl-3 font-[LondonBetween] text-lg font-bold md:p-6 md:text-2xl">JxS</a>
+		<a href="/" class="pl-3 font-[LondonBetween] text-lg font-bold md:p-6 md:text-3xl">JxS</a>
 
 		<nav class="relative flex items-center space-x-4 md:space-x-6">
 			{#if $page.url.pathname === '/valentine'}
