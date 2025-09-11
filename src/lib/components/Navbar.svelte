@@ -97,13 +97,13 @@
 	<header
 		class="flex w-full items-center justify-between p-2 shadow-md backdrop-blur-md transition-colors duration-300 dark:text-white"
 	>
-		<a href="/" class="pl-3 font-[LondonBetween] text-lg font-bold md:p-4 md:text-2xl">JxS</a>
+		<a href="/" class="pl-3 font-[LondonBetween] text-xl font-bold md:p-6 md:text-3xl">JxS</a>
 
-		<nav class="relative flex items-center space-x-4 md:space-x-0">
+		<nav class="relative flex items-center space-x-4 md:space-x-2">
 			{#if $page.url.pathname === '/valentine'}
 				<button
 					on:click={toggleAudio}
-					class="rounded-md p-2 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-900"
+					class="rounded-md p-2 transition-colors hover:bg-neutral-400 dark:hover:bg-neutral-900"
 				>
 					<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
 						{#if !isPlaying}
@@ -117,7 +117,7 @@
 
 			<button
 				on:click={toggleTheme}
-				class="rounded-md p-2 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-900"
+				class="rounded-md p-2 transition-colors hover:bg-neutral-400 dark:hover:bg-neutral-900"
 			>
 				<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
 					{#if $theme === 'light'}
@@ -134,7 +134,7 @@
 					aria-label="Toggle menu"
 					aria-expanded={$isMenuOpen}
 					bind:this={menuButton}
-					class="rounded-md p-2 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-900"
+					class="rounded-md p-2 transition-colors hover:bg-neutral-400 dark:hover:bg-neutral-900"
 				>
 					<div class="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
 						{#if !$isMenuOpen}
