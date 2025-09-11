@@ -6,8 +6,10 @@
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
 	};
 
-	let startDate = new Date('2025-06-30');
-	let daysPassed = Math.floor((new Date().getTime() - startDate.getTime()) / (1000 * 3600 * 24));
+	let startDate1 = new Date('2024-06-04');
+	let startDate2 = new Date('2025-06-30');
+	let daysPassed1 = Math.floor((new Date().getTime() - startDate1.getTime()) / (1000 * 3600 * 24));
+	let daysPassed2 = Math.floor((new Date().getTime() - startDate2.getTime()) / (1000 * 3600 * 24));
 	const Lines = [
 		'a little place on the internet to celebrate us!',
 		'we have music, cute plushies, and lots of love',
@@ -17,9 +19,10 @@
 		'cat->🐶',
 		'pineapples > mangoes',
 		'insert quirky loading screen tip',
-		'vs monkey was ' + daysPassed + ' days ago',
+		'vs monkey was ' + daysPassed2 + ' days ago',
 		'counting stars, counting days, counting love',
-		'this site is powered by hugs and smiles'
+		'this site is powered by hugs and smiles',
+		daysPassed1 + ' days of us being us'
 	];
 	function getRandomLine() {
 		const randomIndex = Math.floor(Math.random() * Lines.length);
@@ -86,14 +89,18 @@
 			<span class="block md:inline">Siddhant</span>
 		</h1>
 		<h2
-			class="to-pink animate-gradient relative bg-gradient-to-r from-pink-600 via-pink-400 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
+			class="relative bg-gradient-to-r from-pink-700 via-pink-600 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl dark:from-pink-800 dark:via-pink-500 dark:to-pink-800"
 		>
 			Forever<br />
 		</h2>
 		<h3
 			class="animate-heartbeat relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl md:mt-2 md:text-7xl"
 		>
-			<img src="/imgs/heart.webp" alt="" class="inline h-18 w-18 md:h-25 md:w-25" />
+			{#if $theme === 'dark'}
+				<img src="/imgs/heart-dark.webp" alt="" class="inline h-18 w-18 md:h-28 md:w-28" />
+			{:else}
+				<img src="/imgs/heart-dark.webp" alt="" class="inline h-18 w-18 md:h-28 md:w-28" />
+			{/if}
 		</h3>
 		<h4
 			class="mt-8 bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonBetween] text-base font-bold text-gray-800 md:text-2xl dark:text-gray-300"
