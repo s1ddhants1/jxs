@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores/theme.js';
 	import Stars from '$lib/components/Stars.svelte';
+	import { fade } from 'svelte/transition';
 
 	const toggleTheme = () => {
 		theme.update((current) => (current === 'light' ? 'dark' : 'light'));
@@ -87,13 +89,11 @@
 			<span class="block md:inline">Siddhant</span>
 		</h1>
 		<h2
-			class="animate-gradient relative bg-gradient-to-r from-pink-700 via-pink-600 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl dark:from-pink-800 dark:via-pink-500 dark:to-pink-800"
+			class="animate-gradient relative bg-gradient-to-r from-pink-600 via-pink-300 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
 		>
 			Forever<br />
 		</h2>
-		<h3
-			class="animate-heartbeat relative bg-gradient-to-r from-pink-700 via-pink-500 bg-clip-text font-[LondonTwo] text-6xl md:mt-2 md:text-7xl"
-		>
+		<h3 class="animate-heartbeat relative text-6xl md:mt-2 md:text-7xl">
 			{#if $theme === 'dark'}
 				<img src="/imgs/heart-dark.webp" alt="" class="inline h-18 w-18 md:h-28 md:w-28" />
 			{:else}
@@ -139,12 +139,15 @@
 		0% {
 			background-position: 0% 50%;
 		}
+		50% {
+			background-position: 100% 50%;
+		}
 		100% {
 			background-position: 200% 50%;
 		}
 	}
 	.animate-gradient {
 		background-size: 200% auto;
-		animation: gradient 3s linear infinite;
+		animation: gradient 4s linear infinite;
 	}
 </style>
