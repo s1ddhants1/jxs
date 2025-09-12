@@ -38,7 +38,7 @@
 					would you like to...
 				</p>
 				<p
-					class="animate-gradient bg-gradient-to-r from-pink-700 via-pink-400 to-pink-700 bg-clip-text text-4xl leading-10 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
+					class="animate-gradient bg-gradient-to-r from-pink-700 via-pink-400 to-pink-700 bg-clip-text text-4xl leading-18 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
 				>
 					Be My Valentine?
 				</p>
