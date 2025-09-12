@@ -23,7 +23,7 @@
 	});
 </script>
 
-<section class="h-screen w-full overflow-hidden">
+<section class="fixed h-screen w-full overflow-hidden">
 	<div class="absolute inset-0 z-10 overflow-hidden">
 		<Confetti />
 	</div>

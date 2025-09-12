@@ -8,7 +8,7 @@
 			character: characters[Math.floor(Math.random() * characters.length)],
 			x: 50,
 			y: 50,
-			size: 0.6 + Math.random() * 1.2,
+			size: 0.8 + Math.random() * 1.6,
 			opacity: 0.7 + Math.random() * 0.3,
 			speedX: -0.005 + Math.random() * 0.01,
 			speedY: -0.005 + Math.random() * 0.01,
@@ -64,7 +64,7 @@
 					scale({c.size})
 					rotate({c.rotation}deg);
 				opacity: {c.opacity};
-				font-size: clamp(70px, {2 + c.size}vw, 42px);"
+				font-size: {2 + c.size * 2}vw;"
 		>
 			{c.character}
 		</span>
