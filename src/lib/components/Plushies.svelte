@@ -30,7 +30,7 @@
 			src="/imgs/kim.webp"
 			alt="Kim"
 			class="relative z-10 w-[60vw] max-w-[280px] object-contain transition-all duration-[2000ms] ease-in-out"
-			class:-translate-x-10={sectionVisible}
+			class:-translate-x-8={sectionVisible}
 			class:-translate-x-full={!sectionVisible}
 		/>
 		<p
@@ -51,11 +51,11 @@
 			class:scale-90={!sectionVisible}
 		>
 			<p
-				class="bg-gradient-to-b from-amber-600 via-amber-600 to-amber-800 bg-clip-text text-[50px] font-extrabold text-transparent md:mt-20 dark:from-amber-400 dark:via-amber-700 dark:to-amber-600"
+				class="animate-gradient bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700 bg-clip-text text-[50px] font-extrabold text-transparent md:mt-20"
 			>
 				<span class="text-6xl">Meet</span> <br />the gang <br />
 			</p>
-			<span class="text-lg text-amber-800 dark:text-amber-500"
+			<span class="text-lg text-amber-800 dark:text-amber-600"
 				>beware: they take cuddles seriously</span
 			>
 		</div>
@@ -65,7 +65,7 @@
 			alt="Olaf"
 			class="relative z-10 w-[60vw] max-w-[250px] object-contain transition-all
          duration-[2000ms] ease-in-out"
-			class:translate-x-10={sectionVisible}
+			class:translate-x-20={sectionVisible}
 			class:translate-x-full={!sectionVisible}
 		/>
 		<p
@@ -104,5 +104,21 @@
 			rgba(0, 0, 0, 1),
 			transparent
 		);
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
+	.animate-gradient {
+		background-size: 200% auto;
+		animation: gradient 4s linear infinite;
 	}
 </style>

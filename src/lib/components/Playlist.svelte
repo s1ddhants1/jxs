@@ -39,13 +39,11 @@
 
 <section class="flex min-h-screen w-full flex-col items-center justify-center rounded-xl">
 	<p
-		class="mt-40 bg-gradient-to-b from-rose-700 via-rose-900 to-rose-950 bg-clip-text text-6xl font-extrabold tracking-wide text-transparent"
+		class="animate-gradient mt-40 bg-gradient-to-r from-rose-900 via-rose-600 to-rose-900 bg-clip-text text-6xl font-extrabold tracking-wide text-transparent"
 	>
 		PLAYLIST
 	</p>
-	<p
-		class="text-5l via-rose-850 te mt-2 bg-gradient-to-b from-rose-800 to-rose-950 bg-clip-text text-transparent"
-	>
+	<p class="text-5l mt-2 bg-clip-text text-rose-900 dark:text-rose-800">
 		for songs that make me think of Nini!
 	</p>
 
@@ -96,7 +94,11 @@
 			background-position: 100% 50%;
 		}
 		100% {
-			background-position: 0% 50%;
+			background-position: 200% 50%;
 		}
+	}
+	.animate-gradient {
+		background-size: 200% auto;
+		animation: gradient 4s linear infinite;
 	}
 </style>

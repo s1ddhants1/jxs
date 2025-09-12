@@ -24,7 +24,7 @@
 </script>
 
 <section class="h-screen w-full overflow-hidden">
-	<div class="absolute inset-0 z-10">
+	<div class="absolute inset-0 z-10 overflow-hidden">
 		<Confetti />
 	</div>
 
