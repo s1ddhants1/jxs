@@ -24,15 +24,13 @@
 </script>
 
 <section class="h-screen w-full overflow-hidden">
-	<div class="fixed inset-0 z-10 h-screen overflow-hidden">
+	<div class="absolute inset-0 z-10">
 		<Confetti />
 	</div>
 
-	<div
-		class="light fixed z-20 flex w-full items-center justify-center p-40 font-[LondonBetween] font-bold text-nowrap"
-	>
+	<div class="light z-20 flex items-center justify-center p-30 font-[LondonBetween] font-bold">
 		<div
-			class="max-w-md rounded-xl border border-white/20 bg-white/10 p-7 shadow-lg backdrop-blur-md md:p-4 dark:bg-white/5"
+			class="z-20 rounded-xl border border-white/20 bg-white/10 p-7 shadow-lg backdrop-blur-md md:p-8 dark:bg-white/5"
 		>
 			<div class="typing-animation">
 				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
@@ -42,7 +40,7 @@
 					would you like to...
 				</p>
 				<p
-					class="bg-gradient-to-r from-pink-700 via-pink-500 to-pink-200 bg-clip-text text-4xl leading-15 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
+					class="animate-gradient bg-gradient-to-r from-pink-700 via-pink-400 to-pink-700 bg-clip-text text-4xl leading-15 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
 				>
 					Be My Valentine?
 				</p>
@@ -68,5 +66,21 @@
 		transition:
 			width 2s ease,
 			opacity 1s ease;
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
+	.animate-gradient {
+		background-size: 200% auto;
+		animation: gradient 4s linear infinite;
 	}
 </style>
