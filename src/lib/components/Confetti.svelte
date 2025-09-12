@@ -1,20 +1,24 @@
 <script>
 	const characters = ['💕', '🩷', '💗', '💓', '💘', '💞'];
-	const emojiCount = 50;
-	let confetti = $state(
-		Array.from({ length: emojiCount }, (_, i) => ({
-			id: i,
-			character: characters[i % characters.length],
+	const emojiCount = 40;
+
+	function makeConfetto(id) {
+		return {
+			id,
+			character: characters[Math.floor(Math.random() * characters.length)],
 			x: 50,
 			y: 50,
 			size: 0.6 + Math.random() * 1.2,
 			opacity: 0.7 + Math.random() * 0.3,
-			speedX: -0.05 + Math.random() * 0.1,
-			speedY: -0.05 + Math.random() * 0.1,
+			speedX: -0.005 + Math.random() * 0.01,
+			speedY: -0.005 + Math.random() * 0.01,
 			rotation: Math.random() * 360,
-			rotationSpeed: -0.2 + Math.random() * 0.4
-		}))
-	);
+			rotationSpeed: -0.2 + Math.random() * 0.4,
+			delay: Math.random() * 2000
+		};
+	}
+
+	let confetti = $state(Array.from({ length: emojiCount }, (_, i) => makeConfetto(i)));
 
 	let lastTime = 0;
 
@@ -24,7 +28,14 @@
 			const delta = Math.min(50, time - lastTime);
 			lastTime = time;
 
-			for (const c of confetti) {
+			for (let i = 0; i < confetti.length; i++) {
+				const c = confetti[i];
+
+				if (c.delay > 0) {
+					c.delay -= delta;
+					continue;
+				}
+
 				c.x += c.speedX * delta;
 				c.y += c.speedY * delta;
 				c.rotation += c.rotationSpeed * (delta / 16);
@@ -42,7 +53,7 @@
 	});
 </script>
 
-<div class="romantic-atmosphere">
+<div class="container">
 	{#each confetti as c (c.id)}
 		<span
 			class="emoji"
@@ -53,7 +64,7 @@
 					scale({c.size})
 					rotate({c.rotation}deg);
 				opacity: {c.opacity};
-				font-size: {2 + c.size * 2}vw;"
+				font-size: clamp(70px, {2 + c.size}vw, 42px);"
 		>
 			{c.character}
 		</span>
@@ -61,7 +72,7 @@
 </div>
 
 <style>
-	.romantic-atmosphere {
+	.container {
 		position: fixed;
 		inset: 0;
 		width: 100%;
