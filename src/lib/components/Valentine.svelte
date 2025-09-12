@@ -28,24 +28,22 @@
 		<Confetti />
 	</div>
 
-	<div class="light z-20 flex items-center justify-center p-30 font-[LondonBetween] font-bold">
+	<div class="light z-20 flex items-center justify-center p-40 font-[LondonBetween] font-bold">
 		<div
-			class="z-20 rounded-xl border border-white/20 bg-white/10 p-7 shadow-lg backdrop-blur-md md:p-8 dark:bg-white/5"
+			class="z-20 rounded-xl border border-white/20 bg-white/10 p-6 shadow-lg backdrop-blur-md md:p-8 dark:bg-white/5"
 		>
 			<div class="typing-animation">
-				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
-					heyy nini!!
-				</p>
-				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
+				<p class="text-xl text-black text-shadow-md md:text-3xl dark:text-white">heyy nini!!</p>
+				<p class=" text-xl text-black text-shadow-md md:text-3xl dark:text-white">
 					would you like to...
 				</p>
 				<p
-					class="animate-gradient bg-gradient-to-r from-pink-700 via-pink-400 to-pink-700 bg-clip-text text-4xl leading-15 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
+					class="animate-gradient bg-gradient-to-r from-pink-700 via-pink-400 to-pink-700 bg-clip-text text-4xl leading-10 font-bold text-transparent text-shadow-pink-500 md:text-6xl"
 				>
 					Be My Valentine?
 				</p>
-				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">...please?</p>
-				<p class="mt-1 text-xl text-black text-shadow-md md:text-3xl dark:text-white">
+				<p class="text-xl text-black text-shadow-md md:text-3xl dark:text-white">...please?</p>
+				<p class="text-xl text-black text-shadow-md md:text-3xl dark:text-white">
 					I love you &lt;3
 				</p>
 			</div>

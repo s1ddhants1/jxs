@@ -1,132 +1,59 @@
 <script>
-	let characters = ['💕', '🩷', '💗', '💓', '💘', '💞', '🌸'];
-	let emojiCount = 45;
-
-	let lastTime = $state(0);
+	const characters = ['💕', '🩷', '💗', '💓', '💘', '💞'];
+	const emojiCount = 50;
 	let confetti = $state(
-		new Array(emojiCount).fill().map((_, i) => {
-			const scale = 0.7 + Math.random() * 1.3;
-			return {
-				id: i,
-				character: characters[i % characters.length],
-				x: Math.random() * 80 + 10,
-				y: Math.random() * 80 + 10,
-				targetX: 0,
-				targetY: 0,
-				size: scale,
-				speedX: (-0.03 + Math.random() * 0.06) * (0.5 + scale / 2),
-				speedY: (-0.02 + Math.random() * 0.04) * (0.5 + scale / 2),
-				rotation: Math.random() * 360,
-				rotationSpeed: -0.2 + Math.random() * 0.4,
-				opacity: 0.7 + Math.random() * 0.3,
-				lifeProgress: Math.random(),
-				state: 'active',
-				spring: {
-					x: { value: 0, velocity: 0 },
-					y: { value: 0, velocity: 0 },
-					opacity: { value: 1, velocity: 0 }
-				}
-			};
-		})
+		Array.from({ length: emojiCount }, (_, i) => ({
+			id: i,
+			character: characters[i % characters.length],
+			x: 50,
+			y: 50,
+			size: 0.6 + Math.random() * 1.2,
+			opacity: 0.7 + Math.random() * 0.3,
+			speedX: -0.05 + Math.random() * 0.1,
+			speedY: -0.05 + Math.random() * 0.1,
+			rotation: Math.random() * 360,
+			rotationSpeed: -0.2 + Math.random() * 0.4
+		}))
 	);
 
-	const spring = (current, target, velocity, damping = 0.5, stiffness = 0.2) => {
-		const delta = target - current;
-		const acceleration = stiffness * delta - damping * velocity;
-		return {
-			value: current + velocity + acceleration,
-			velocity: velocity + acceleration
-		};
-	};
+	let lastTime = 0;
 
 	$effect(() => {
-		let frame = requestAnimationFrame(function loop(time) {
-			frame = requestAnimationFrame(loop);
-			const deltaTime = Math.min(50, time - lastTime);
+		let frame;
+		function animate(time) {
+			const delta = Math.min(50, time - lastTime);
 			lastTime = time;
-			const cycleDuration = 40000;
-			for (const confetto of confetti) {
-				confetto.lifeProgress = (confetto.lifeProgress + deltaTime / cycleDuration) % 1;
 
-				if (confetto.state === 'fading-in') {
-					confetto.spring.opacity = spring(
-						confetto.spring.opacity.value,
-						1,
-						confetto.spring.opacity.velocity,
-						0.7,
-						0.3
-					);
-					if (confetto.spring.opacity.value > 0.99) confetto.state = 'active';
-				} else if (confetto.lifeProgress > 0.92) {
-					confetto.state = 'fading-out';
-				} else if (confetto.state === 'fading-out') {
-					confetto.spring.opacity = spring(
-						confetto.spring.opacity.value,
-						0,
-						confetto.spring.opacity.velocity,
-						0.7,
-						0.3
-					);
-					if (confetto.spring.opacity.value < 0.01) {
-						confetto.x = Math.random() * 80 + 10;
-						confetto.y = Math.random() * 80 + 10;
-						confetto.speedX = (-0.03 + Math.random() * 0.06) * (0.5 + confetto.size / 2);
-						confetto.speedY = (-0.02 + Math.random() * 0.04) * (0.5 + confetto.size / 2);
-						confetto.lifeProgress = 0;
-						confetto.state = 'fading-in';
-						confetto.spring.opacity.value = 0;
-					}
+			for (const c of confetti) {
+				c.x += c.speedX * delta;
+				c.y += c.speedY * delta;
+				c.rotation += c.rotationSpeed * (delta / 16);
+
+				if (c.x < -10 || c.x > 110 || c.y < -10 || c.y > 110) {
+					confetti[i] = makeConfetto(c.id);
 				}
-
-				if (confetto.state !== 'fading-out') {
-					confetto.targetX = confetto.x + confetto.speedX * deltaTime;
-					confetto.targetY = confetto.y + confetto.speedY * deltaTime;
-
-					confetto.spring.x = spring(
-						confetto.spring.x.value,
-						confetto.targetX - confetto.x,
-						confetto.spring.x.velocity,
-						0.5,
-						0.1
-					);
-
-					confetto.spring.y = spring(
-						confetto.spring.y.value,
-						confetto.targetY - confetto.y,
-						confetto.spring.y.velocity,
-						0.5,
-						0.1
-					);
-
-					confetto.x += confetto.spring.x.value;
-					confetto.y += confetto.spring.y.value;
-					confetto.rotation += confetto.rotationSpeed * (deltaTime / 16);
-				}
-
-				const edgeMargin = 0;
-				const distFromEdgeX = Math.min(confetto.x, 100 - confetto.x);
-				const distFromEdgeY = Math.min(confetto.y, 100 - confetto.y);
-				confetto.edgeFactor = Math.min(1, Math.min(distFromEdgeX, distFromEdgeY) / edgeMargin);
 			}
-		});
 
+			frame = requestAnimationFrame(animate);
+		}
+
+		frame = requestAnimationFrame(animate);
 		return () => cancelAnimationFrame(frame);
 	});
 </script>
 
 <div class="romantic-atmosphere">
-	{#each confetti as c}
+	{#each confetti as c (c.id)}
 		<span
 			class="emoji"
-			class:fade-in={c.state === 'fading-in'}
-			class:fade-out={c.state === 'fading-out'}
-			style="--x: {c.x}%; --y: {c.y}%; 
-				   transform: 
-					   translate(calc(var(--x) - 50%), calc(var(--y) - 50%))
-					   scale({c.size}) 
-					   rotate({c.rotation}deg);
-				   opacity: {c.opacity * c.edgeFactor * c.spring.opacity.value};
-				   font-size: {2 + c.size * 2}vw;"
+			style="
+				top: {c.y}%;
+				left: {c.x}%;
+				transform:
+					scale({c.size})
+					rotate({c.rotation}deg);
+				opacity: {c.opacity};
+				font-size: {2 + c.size * 2}vw;"
 		>
 			{c.character}
 		</span>
@@ -136,38 +63,19 @@
 <style>
 	.romantic-atmosphere {
 		position: fixed;
-		top: 0;
-		left: 0;
+		inset: 0;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-
 		z-index: -1;
 	}
 
 	.emoji {
 		position: absolute;
-		top: 50%;
-		left: 50%;
 		user-select: none;
-		will-change: transform, opacity;
 		pointer-events: none;
-		filter: drop-shadow(0 1px 2px rgba(255, 105, 180, 0.1))
-			drop-shadow(0 2px 4px rgba(255, 105, 180, 0.05));
+		will-change: transform, opacity, top, left;
+		filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.15));
 		transform-origin: center;
-		transition: none;
-	}
-
-	.fade-in {
-		opacity: 0;
-	}
-
-	.fade-out {
-		opacity: 0;
-	}
-
-	:global(body) {
-		margin: 0;
-		overscroll-behavior: none;
 	}
 </style>
