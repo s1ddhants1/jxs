@@ -10,10 +10,10 @@
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
+<Intro />
 <div
 	class="bg-gradient-to-br from-pink-100 to-rose-100 transition-colors duration-500 dark:bg-gradient-to-br dark:from-black dark:to-neutral-800"
 >
-	<Intro />
 	<Navbar />
 	<div class="content-wrapper relative flex h-full min-h-screen flex-col overflow-x-hidden">
 		<slot />

@@ -11,7 +11,7 @@
 </script>
 
 {#if showIntro}
-	<div class="fixed inset-0 z-50 mt-10 flex items-center justify-center bg-white dark:bg-black">
+	<div class="fixed inset-0 z-100 flex items-center justify-center bg-white dark:bg-black">
 		<span
 			class="animate-fadeUpBlur font-[LondonBetween] text-3xl font-bold text-black md:text-4xl dark:text-white"
 		>
