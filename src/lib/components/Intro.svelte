@@ -11,9 +11,9 @@
 </script>
 
 {#if showIntro}
-	<div class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-black">
+	<div class="fixed inset-0 z-50 mt-10 flex items-center justify-center bg-white dark:bg-black">
 		<span
-			class="animate-fadeUpBlur font-[LondonBetween] text-4xl font-bold text-black dark:text-white"
+			class="animate-fadeUpBlur font-[LondonBetween] text-3xl font-bold text-black md:text-4xl dark:text-white"
 		>
 			Welcome!
 		</span>
@@ -27,7 +27,7 @@
 	@keyframes fadeUpBlur {
 		0% {
 			opacity: 0;
-			transform: translateY(20px);
+			transform: translateY(0px);
 			filter: blur(0px);
 		}
 		50% {
@@ -43,7 +43,7 @@
 	}
 
 	.animate-fadeUpBlur {
-		animation: fadeUpBlur 1s ease forwards;
+		animation: fadeUpBlur 2s ease forwards;
 	}
 
 	@keyframes circleExpand {
