@@ -42,7 +42,6 @@
 				the most feared of them all, yet most respected, truly an enigma,the real og- funshine bear</span
 			>
 		</p>
-
 		<!-- Center content -->
 		<div
 			class="relative z-20 items-center justify-between text-center opacity-0 transition-all delay-[1200ms] duration-1000 ease-out"

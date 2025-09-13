@@ -89,7 +89,7 @@
 			<span class="block md:inline">Siddhant</span>
 		</h1>
 		<h2
-			class="animate-gradient relative bg-gradient-to-r from-pink-600 via-pink-400 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
+			class="animate-gradient relative bg-gradient-to-r from-pink-600 via-pink-500 to-pink-600 bg-clip-text font-[LondonTwo] text-6xl leading-20 text-transparent md:mt-5 md:text-7xl"
 		>
 			Forever<br />
 		</h2>

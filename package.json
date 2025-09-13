@@ -18,7 +18,7 @@
 		"@eslint/js": "^9.35.0",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/adapter-cloudflare": "^5.1.0",
-		"@sveltejs/kit": "^2.39.0",
+		"@sveltejs/kit": "^2.39.1",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
 		"@tailwindcss/vite": "^4.1.13",
 		"eslint": "^9.35.0",
@@ -37,6 +37,7 @@
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
+			"@tailwindcss/oxide",
 			"esbuild"
 		]
 	},
